@@ -1,0 +1,74 @@
+name: Build e Deploy - joga-together-web
+
+on:
+  push:
+    branches: [ "main" ]
+    tags: [ 'v*.*.*' ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build_and_push_docker:
+    name: Build e Push da Imagem Docker
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+
+    env:
+      IMAGE_VERSION: ${{ github.ref_name }}
+
+    steps:
+      - name: "Checkout do código"
+        uses: actions/checkout@v4
+
+      - name: "Configura o Docker Buildx"
+        uses: docker/setup-buildx-action@v3
+
+      - name: "Login no Docker Hub"
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: "Build e Push da imagem"
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: |
+            ojasonw/joga-together-web:${{ env.IMAGE_VERSION }}
+            ojasonw/joga-together-web:latest
+
+  update_gitops_repo:
+    name: Atualiza Repositório GitOps
+    runs-on: ubuntu-latest
+    needs: build_and_push_docker
+    if: startsWith(github.ref, 'refs/tags/v')
+
+    env:
+      IMAGE_VERSION: ${{ github.ref_name }}
+
+    steps:
+      - name: "Checkout do repositório GitOps"
+        uses: actions/checkout@v4
+        with:
+          repository: ojasonw/homelab-gitops
+          token: ${{ secrets.GITOPS_PAT }}
+
+      - name: "Atualiza a tag da imagem no kustomization.yaml"
+        run: |
+          cd infra/joga-together-web/base
+          sed -i "s/newTag: .*/newTag: ${{ env.IMAGE_VERSION }}/" kustomization.yaml
+
+      - name: "Cria um Pull Request"
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITOPS_PAT }}
+          commit-message: "chore: update joga-together-web image to ${{ env.IMAGE_VERSION }}"
+          title: "CI: Atualiza joga-together-web para ${{ env.IMAGE_VERSION }}"
+          body: |
+            Atualização automática da imagem pela GitHub Action.
+
+            **Image:** `ojasonw/joga-together-web:${{ env.IMAGE_VERSION }}`
+          branch: "update-joga-together-web-${{ env.IMAGE_VERSION }}"
+          base: "main"
+          delete-branch: true
