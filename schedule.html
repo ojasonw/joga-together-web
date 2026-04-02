@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Joga Together | Schedule</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="/js/tailwind.config.js"></script>
+<link rel="stylesheet" href="/css/style.css"/>
+<style>
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0e0e0e; }
+::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 10px; }
+</style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+
+<!-- SideNavBar (Desktop) -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#0e0e0e] shadow-[4px_0px_24px_rgba(0,0,0,0.5)] hidden md:flex flex-col py-8 gap-2 z-50">
+<div class="px-6 mb-10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="professional esports player avatar in dark moody lighting with purple neon rim light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoAggSrFCugKPQTt5C01uZD9gBwITleXtpqnf0JNbWCzK9fZeF5Qx74MmHSRPGmqBYrVsi_n9WaLbfb7T9AEk4bTIwZuuFNQNmu6Pthl6k6jYjvFEG69OtW-LPs4qUBGLfBnFKUeVFgXBGwpUY5HTWgvSd9dfZ5z1yTg09pIBeegoLxb0_1gBB_8klLYBUj0t-cq8o5BEnaaBW34dIDsQVr9pyF8uDWLD2A0IrxH3zeHAwGepZG52sMEMD6Qhj7zothT3FzZutlRjp"/>
+</div>
+<div>
+<h3 class="text-on-surface font-bold text-sm">Joga Player</h3>
+<p class="text-[10px] uppercase tracking-widest text-primary font-bold">Elite Tier</p>
+</div>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="text-[#cbc3d5] px-6 py-3 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+                    Home
+                </div>
+</a>
+<a class="text-[#cbc3d5] px-6 py-3 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+                    Explore Rooms
+                </div>
+</a>
+<a class="text-[#cbc3d5] px-6 py-3 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+                    Create Room
+                </div>
+</a>
+<a class="bg-gradient-to-r from-[#4a1fa1]/20 to-transparent text-[#cfbcff] border-l-4 border-[#4a1fa1] px-6 py-3 transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+                    Schedule
+                </div>
+</a>
+<a class="text-[#cbc3d5] px-6 py-3 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="sports_esports">sports_esports</span>
+                    Games
+                </div>
+</a>
+<a class="text-[#cbc3d5] px-6 py-3 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+                    Notifications
+                </div>
+</a>
+<a class="text-[#cbc3d5] px-6 py-3 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+                    Profile
+                </div>
+</a>
+<a class="text-[#cbc3d5] px-6 py-3 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                    Settings
+                </div>
+</a>
+</nav>
+</aside>
+<!-- TopNavBar (Mobile Only) -->
+<header class="md:hidden w-full top-0 sticky z-50 bg-[#0e0e0e] shadow-none flex justify-between items-center px-6 py-4">
+<h1 class="text-xl font-bold tracking-tighter text-[#e5e2e1]">joga-together</h1>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="notifications">notifications</span>
+<div class="w-8 h-8 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="user avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQenjemwX9F0HW2tQGiR1YGWBwtChEmVYjDOlSPPpfDxSv3f7NsmWPtGjmxkH9-PpYdLxQBaQt1ooQC4tV22BYSqdsy0-Bxv30OpXeS8RpjikLoiSaxPM9wWbkhLZb7D4Jxg73GyTZ-wRcaz0p_0csKydPJuOrlpPD1Prcu8KFqN0waM3WkCxXU3r2BK7FJip7HIYAVXn3U5AzjyZj5hMQg4RCIlSS9yDNT0K24B4A0h5366FrVXwsezSnpcidlVoX8Uh26ssrB3I_"/>
+</div>
+</div>
+</header>
+<main class="md:ml-64 p-6 md:p-12 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h2 class="text-display-lg text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface mb-4">
+                        Schedule <span class="text-primary">Session</span>
+</h2>
+<p class="text-on-surface-variant max-w-xl leading-relaxed">
+                        Coordinate your next competitive match. Set the time, invite your squad, and lock in the arena.
+                    </p>
+</div>
+<div class="flex items-center gap-2 text-primary font-semibold text-sm tracking-widest uppercase">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    System Online
+                </div>
+</div>
+</header>
+<!-- Main Content Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Schedule Section (Calendar & Time) -->
+<section class="lg:col-span-7 flex flex-col gap-8">
+<div class="bg-surface-container-low rounded-xl p-8 transition-colors duration-300 hover:bg-surface-container-high group">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-xl font-bold tracking-tight flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="event">event</span>
+                            Select Date
+                        </h3>
+<div class="flex gap-2">
+<button class="p-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Custom Calendar Grid -->
+<div class="grid grid-cols-7 gap-2 mb-4">
+<div class="text-center text-[10px] font-bold text-on-surface-variant uppercase tracking-widest py-2">Mon</div>
+<div class="text-center text-[10px] font-bold text-on-surface-variant uppercase tracking-widest py-2">Tue</div>
+<div class="text-center text-[10px] font-bold text-on-surface-variant uppercase tracking-widest py-2">Wed</div>
+<div class="text-center text-[10px] font-bold text-on-surface-variant uppercase tracking-widest py-2">Thu</div>
+<div class="text-center text-[10px] font-bold text-on-surface-variant uppercase tracking-widest py-2">Fri</div>
+<div class="text-center text-[10px] font-bold text-on-surface-variant uppercase tracking-widest py-2">Sat</div>
+<div class="text-center text-[10px] font-bold text-on-surface-variant uppercase tracking-widest py-2">Sun</div>
+<!-- Empty cells for padding -->
+<div class="h-12 flex items-center justify-center text-on-surface-variant/20">28</div>
+<div class="h-12 flex items-center justify-center text-on-surface-variant/20">29</div>
+<div class="h-12 flex items-center justify-center text-on-surface-variant/20">30</div>
+<!-- Days -->
+<button class="h-12 rounded-lg flex items-center justify-center hover:bg-primary-container/20 transition-colors">1</button>
+<button class="h-12 rounded-lg flex items-center justify-center hover:bg-primary-container/20 transition-colors">2</button>
+<button class="h-12 rounded-lg flex items-center justify-center hover:bg-primary-container/20 transition-colors">3</button>
+<button class="h-12 rounded-lg flex items-center justify-center hover:bg-primary-container/20 transition-colors">4</button>
+<button class="h-12 rounded-lg flex items-center justify-center hover:bg-primary-container/20 transition-colors font-bold text-primary ring-1 ring-primary/30 bg-primary-container/10">5</button>
+<button class="h-12 rounded-lg flex items-center justify-center hover:bg-primary-container/20 transition-colors">6</button>
+<button class="h-12 rounded-lg flex items-center justify-center hover:bg-primary-container/20 transition-colors">7</button>
+<button class="h-12 rounded-lg flex items-center justify-center hover:bg-primary-container/20 transition-colors">8</button>
+<button class="h-12 rounded-lg flex items-center justify-center hover:bg-primary-container/20 transition-colors">9</button>
+<button class="h-12 rounded-lg flex items-center justify-center hover:bg-primary-container/20 transition-colors">10</button>
+<button class="h-12 rounded-lg flex items-center justify-center hover:bg-primary-container/20 transition-colors">11</button>
+<button class="h-12 rounded-lg flex items-center justify-center hover:bg-primary-container/20 transition-colors">12</button>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-8 transition-colors duration-300 hover:bg-surface-container-high">
+<h3 class="text-xl font-bold tracking-tight flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+                        Available Times
+                    </h3>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<button class="py-3 px-4 rounded-lg bg-surface-container-lowest border border-outline-variant/15 text-on-surface-variant hover:border-primary transition-all">18:00</button>
+<button class="py-3 px-4 rounded-lg bg-surface-container-lowest border border-outline-variant/15 text-on-surface-variant hover:border-primary transition-all">19:30</button>
+<button class="py-3 px-4 rounded-lg bg-primary-container text-primary font-bold border border-primary/50">21:00</button>
+<button class="py-3 px-4 rounded-lg bg-surface-container-lowest border border-outline-variant/15 text-on-surface-variant hover:border-primary transition-all">22:30</button>
+</div>
+</div>
+</section>
+<!-- Invite Section (Friends & Search) -->
+<section class="lg:col-span-5 flex flex-col gap-8">
+<div class="bg-surface-container-low rounded-xl p-8 flex flex-col h-full transition-colors duration-300 hover:bg-surface-container-high">
+<h3 class="text-xl font-bold tracking-tight flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="person_add">person_add</span>
+                        Invite Players
+                    </h3>
+<div class="relative mb-8">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+<input class="w-full bg-surface-container-lowest border-none rounded-lg py-4 pl-12 pr-4 text-on-surface placeholder:text-on-surface-variant/40 focus:ring-2 focus:ring-primary/50 transition-all" placeholder="Search friends or teammates..." type="text"/>
+</div>
+<div class="space-y-4 overflow-y-auto max-h-[400px] pr-2">
+<!-- Friend Item: Accepted -->
+<div class="flex items-center justify-between p-4 rounded-lg bg-surface-container-lowest/50 hover:bg-surface-container-lowest transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full border-2 border-primary/20 p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="gamer profile portrait with blue backlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIcjOtxbgQHlfiHcPRbDcOlyB5yKDuiVmfdVd3t6A_JEyqW9SJHeP2CKksB0vDDLPU1GOzZSn_ZdvlG-Z7aqGgoUD636QheQt-SJrUIhELka6AWBT9mSrCTkW7J0vEmYK7Us7VM9FsqYGyKIpW6Y9MpYwQ3nGjaIVGt_kZfdN7mHuxjrMvWOLTC8_lcDgSyuX67g4VaEW29JUSiGAZdh0OkpU8iLVX3o_TtYuk_ec2Y-Mm_ZkS3M7d1ah3l25dd8FYtghBcr_aiVwD"/>
+</div>
+<div>
+<h4 class="text-sm font-bold">CyberViper</h4>
+<p class="text-[10px] text-primary-fixed-dim uppercase tracking-tighter">Pro Striker</p>
+</div>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary px-3 py-1 rounded-full bg-primary/10">Accepted</span>
+</div>
+<!-- Friend Item: Pending -->
+<div class="flex items-center justify-between p-4 rounded-lg bg-surface-container-lowest/50 hover:bg-surface-container-lowest transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full border-2 border-outline-variant/15 p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="young man smiling gamer avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeJC1gC55rmydPuc9EZeYHc2FTDku9D3uLwEIUgmm-7HxBRqekxBIXJ5lpdTGPx2oetMSBD9DxNDv26Tw0KyWVbWWPQIHlGI-k0jTqmHH_a8jzMEOQohS-cgIATjTPFFldmgAxCGAwjSNc7n1ZU7dW3eyudoc4VkzYJ4Mr9pDonwIFWLWroW61C8P3UICrdfxkVVcNonlVlqoqRjcZyb4FxgPLpdgwThpM5w4cm5oqMViCzHzd_S6Mao16QimMV-WWOxyQwdTm0vGM"/>
+</div>
+<div>
+<h4 class="text-sm font-bold">Ghost_Ops</h4>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Strategist</p>
+</div>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/60 px-3 py-1 rounded-full bg-surface-container-high">Pending</span>
+</div>
+<!-- Friend Item: Declined -->
+<div class="flex items-center justify-between p-4 rounded-lg bg-surface-container-lowest/50 hover:bg-surface-container-lowest transition-colors opacity-60">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full border-2 border-error-container/20 p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="female gamer avatar with cool lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSqqLoPQr2_n4rhb1ksbG0n4TkMdeOtpndmWWjYadSVrAToMByITZVMp7OiYvf7q1-Tbxr8ix9x3c4jFAOT75Cw-9_LSf-oOoIyJ2YRpB9s1BaybTiwDfQ89SfWLY0QzPQ1aKq9zNcJEE-UW7j2eAZnFxj187dQt_Uw2d4PksfiJVKDKh1BhpoEkjl2mbmKLpg-ju_96EqH7cuxjzfNZMLSXmAFM6YWIO-NxlzIO50ej3pvOnffs2n4wvaKpucCO0BXSoinOMIsrYc"/>
+</div>
+<div>
+<h4 class="text-sm font-bold">Luna_Tic</h4>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Support</p>
+</div>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-error-container/80 px-3 py-1">Declined</span>
+</div>
+<!-- More Friend Item -->
+<div class="flex items-center justify-between p-4 rounded-lg bg-surface-container-lowest/50 hover:bg-surface-container-lowest transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full border-2 border-outline-variant/15 p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="focused gamer profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADr1Ft1O24KTLvdO2ZYNrF-3Tr11g_9A8-GP1Y3RWsKkWtWRXkkU6lLharhUA6Apd6aIPJHi52lOjiWd0gu1dftp_UyPiTztF1TnTZr4sRBMIPhktWrAd6171XVVe1zbhQ0rXLnZiZRQWfj5CiTx2EDaaFJfyCSGjzHHoxtZx3UxrUNaIPZ4UDmaPB23nRJR5K9rrfZx_h6WScTxgU2dBK_vii1-tUzwzSFM1oApeKsWF9Y1wfWO6FSXCUL4jciEcrdRvSA6O5Lm79"/>
+</div>
+<div>
+<h4 class="text-sm font-bold">Neon_Pulse</h4>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Defender</p>
+</div>
+</div>
+<button class="p-2 rounded-full hover:bg-primary/20 transition-colors text-primary">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Summary Section (Full Width) -->
+<section class="lg:col-span-12">
+<div class="bg-gradient-to-br from-surface-container-high to-surface-container-lowest rounded-xl p-8 border-l-4 border-primary shadow-2xl relative overflow-hidden group">
+<!-- Subtle Background Texture/Glow -->
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 rounded-full blur-[100px] group-hover:bg-primary/10 transition-colors duration-700"></div>
+<div class="flex flex-col md:flex-row items-center justify-between gap-10 relative z-10">
+<div class="flex flex-wrap gap-8 md:gap-12">
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold mb-2">Session Date</p>
+<p class="text-xl font-extrabold text-on-surface">Friday, Nov 5</p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold mb-2">Kickoff Time</p>
+<p class="text-xl font-extrabold text-on-surface">21:00 UTC</p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold mb-2">Session Type</p>
+<p class="text-xl font-extrabold text-on-surface">Ranked 3v3</p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold mb-2">Confirmed</p>
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full ring-2 ring-surface-container-high" data-alt="avatar 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQiAxekydI8Io0NcBfilnPRzm1GgwpPXUen6zsoj0xdIIGFgPW8VVQPqy-uiWT9K2i7Z4dUwUxl60kpUvaxsCezyeI96dA6nZU4cjxQtBqcBWOhoKBlLG-ukH-8guZM-pNn_SMIVVeD5OTzNcYPmRNUvIrqr157JBQntk9YvYgzSMaTa80OX0DwOp5a_gtZEnj6jYmeE91Hb2QTVXSYFDkSN71odLCHJ5pk1egyMKrQg5wBROBWYocxF5aqgP8ih-cqDIgN3qmZdOX"/>
+<img class="w-8 h-8 rounded-full ring-2 ring-surface-container-high" data-alt="avatar 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkyVFueHisQl-hlCmP6uUSjOrjkYMJhQU13r0GgGCLNPYtYd6fuzADJIKRqDWu6xp2403kramveCqSog9ASFXIABCSxw2KqMqC2C-8f1TfgNCTBjU7BMX_e6SiBDKfldre1Y38V8eMxGs7FG2k-kwY4qColX6KEmjWeAJy2ToNtz3GftOImVVeroncSDpBppoVWinlYw3aMDq1u21-n73XavUKKL3LG8kFMO4mbcwSxaXu7Aw6G5wCXJrfVuKQEcCpb_NzTZPJSwR7"/>
+<div class="w-8 h-8 rounded-full ring-2 ring-surface-container-high bg-primary-container flex items-center justify-center text-[10px] font-bold text-primary">2+</div>
+</div>
+</div>
+</div>
+<button class="w-full md:w-auto px-10 py-5 bg-[#4A1FA1] hover:bg-primary transition-all duration-300 rounded-lg text-on-surface font-extrabold uppercase tracking-[0.1em] shadow-[0_0_40px_-10px_rgba(74,31,161,0.6)] flex items-center justify-center gap-3 active:scale-95">
+                            Confirm Session
+                            <span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-[#131313] border-t border-[#cbc3d5]/15 mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto gap-8">
+<div class="flex flex-col gap-2">
+<span class="text-lg font-bold text-[#e5e2e1]">joga-together</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs text-[#cbc3d5]/60">© 2024 Joga Together. All rights reserved.</span>
+</div>
+<div class="flex gap-8">
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-[#cbc3d5]/60 hover:text-[#cfbcff] opacity-80 hover:opacity-100 transition-all" href="#">Legal</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-[#cbc3d5]/60 hover:text-[#cfbcff] opacity-80 hover:opacity-100 transition-all" href="#">Privacy</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-[#cbc3d5]/60 hover:text-[#cfbcff] opacity-80 hover:opacity-100 transition-all" href="#">Careers</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-[#cbc3d5]/60 hover:text-[#cfbcff] opacity-80 hover:opacity-100 transition-all" href="#">Contact</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation Bar -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-[#0e0e0e] flex justify-around items-center py-4 z-50 shadow-[0_-4px_24px_rgba(0,0,0,0.5)]">
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" data-icon="calendar_today" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Schedule</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Explore</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</button>
+</nav>
+
+<script src="/js/main.js"></script>
+<script src="/js/pages/schedule.js"></script>
+</body>
+</html>
