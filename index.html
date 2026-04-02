@@ -6,8 +6,8 @@
 <title>Joga Together | Home</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script src="/js/tailwind.config.js"></script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="/js/tailwind.config.js"></script>
 <link rel="stylesheet" href="/css/style.css"/>
 </head>
 <body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
@@ -56,12 +56,12 @@
                     Experience competitive play refined. Connect with elite players in a sanctuary designed for performance, strategy, and seamless coordination.
                 </p>
 <div class="flex flex-wrap gap-4">
-<button class="hero-gradient text-on-primary-container px-10 py-4 rounded-lg font-bold text-lg hover:scale-[1.02] transition-transform duration-200">
+<a href="/browse-rooms" class="hero-gradient text-on-primary-container px-10 py-4 rounded-lg font-bold text-lg hover:scale-[1.02] transition-transform duration-200 inline-block">
                         Find Rooms
-                    </button>
-<button class="bg-surface-container-high text-on-surface px-10 py-4 rounded-lg font-bold text-lg border border-outline-variant/15 hover:bg-surface-bright transition-colors duration-200">
+                    </a>
+<a href="/create-room" class="bg-surface-container-high text-on-surface px-10 py-4 rounded-lg font-bold text-lg border border-outline-variant/15 hover:bg-surface-bright transition-colors duration-200 inline-block">
                         Create Room
-                    </button>
+                    </a>
 </div>
 </div>
 </section>
@@ -73,9 +73,9 @@
 <h2 class="text-sm font-bold tracking-[0.2em] uppercase text-primary mb-4">Trending Environments</h2>
 <h3 class="text-4xl font-bold tracking-tight text-on-surface">Featured Titles</h3>
 </div>
-<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 text-sm font-bold uppercase tracking-widest">
+<a href="/game-discovery" class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 text-sm font-bold uppercase tracking-widest">
                         View All Games <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
+</a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 <div class="group relative aspect-[3/4] overflow-hidden rounded-xl bg-surface-container-low transition-all duration-500 hover:-translate-y-2">
@@ -247,8 +247,8 @@
                         Host exclusive rooms, manage your regular squads, and build a reputation in the elite gaming community.
                     </p>
 <div class="flex gap-4 relative z-10">
-<button class="bg-primary text-on-primary px-8 py-3 rounded-lg font-bold hover:scale-105 transition-transform">Create New Room</button>
-<button class="bg-transparent text-on-surface border border-outline-variant/20 px-8 py-3 rounded-lg font-bold hover:bg-surface-bright transition-colors">Browse Documentation</button>
+<a href="/create-room" class="bg-primary text-on-primary px-8 py-3 rounded-lg font-bold hover:scale-105 transition-transform inline-block">Create New Room</a>
+<a href="/browse-rooms" class="bg-transparent text-on-surface border border-outline-variant/20 px-8 py-3 rounded-lg font-bold hover:bg-surface-bright transition-colors inline-block">Browse Rooms</a>
 </div>
 </div>
 </div>
