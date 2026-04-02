@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Joga Together | Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="/js/tailwind.config.js"></script>
+<link rel="stylesheet" href="/css/style.css"/>
+<style>
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0e0e0e; }
+    ::-webkit-scrollbar-thumb { background: #4a1fa1; border-radius: 10px; }
+</style>
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- SideNavBar (Shared Component) -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#0e0e0e] shadow-[4px_0px_24px_rgba(0,0,0,0.5)] flex flex-col py-8 gap-2 z-50">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden">
+<img alt="User avatar" data-alt="high-quality 3D avatar of a young gamer with headphones and a confident expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlOUCXULUV6CKEOsPie59alYTYyl7irTy_TUFfva51axJEuzDOZSCoRo71CjwTE-XQbn3QnkxxbtFGfELmQ-TGmxGr2h0XJzcE08VniCK_hlHRc7G3Bcq4OIN67tD49OSU4jIhhJysXP26K94i2QTN7B99FoGngU4VOPmVMJwErfM32_POz_3UTnmE3Fo6-Fp0uCBF8J0UeeZyNl2o_i9FY-6Knay5mUMkE0Fg9JXIUGrLU8Nlcl1qL0D0c39Br7Z-o6pWwM1_Bh36"/>
+</div>
+<div>
+<h3 class="text-on-surface font-bold text-sm tracking-tight">Joga Player</h3>
+<span class="text-[#cfbcff] text-[10px] font-['Plus_Jakarta_Sans'] uppercase tracking-widest font-bold">Elite Tier</span>
+</div>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="bg-gradient-to-r from-[#4a1fa1]/20 to-transparent text-[#cfbcff] border-l-4 border-[#4a1fa1] px-6 py-3 flex items-center gap-4 transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">Home</span>
+</a>
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">Explore Rooms</span>
+</a>
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">Create Room</span>
+</a>
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">Schedule</span>
+</a>
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">sports_esports</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">Games</span>
+</a>
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">notifications</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">Notifications</span>
+</a>
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">Profile</span>
+</a>
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">settings</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">Settings</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content -->
+<main class="ml-64 p-8 max-w-[1600px]">
+<!-- Header / Welcome Section -->
+<header class="mb-12 flex justify-between items-end">
+<div>
+<span class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-2 block">Player Dashboard</span>
+<h1 class="text-5xl font-extrabold tracking-tighter text-on-surface">Welcome back, Alex!</h1>
+</div>
+<div class="flex gap-4">
+<div class="bg-surface-container-low px-6 py-3 rounded-lg flex items-center gap-4">
+<div class="flex -space-x-3">
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-low" data-alt="small circular avatar of a stylized gamer profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsvaMHLWCGitddUzIiu7yxTOCY_p2pj9cJb7UFBq1nGRs3k_-6fIWi2n5ZSluznrUXpRd4bBnAaBVGZZdxJWHF_q1QRpzW_yGGulnhaIHpfM-Oza8jr-QaeMDdaCo9wAnHMwYpEkWY2dMdC-d_O6IEW-Ky9tPNeWvzk_WNgz8RJ41MIl8AogywpC509hxxbyGluLJwwLaHjvSRamjbUafAhnjO7ui248Gv6eGaxarAzDApGY8sC13vSaLtfxI6tqEs-T8cpFpo34lJ"/>
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-low" data-alt="small circular avatar of a stylized gamer profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDplWZoip0kq269IjmnLel8n3lFqm1JFDJzbQEox_VoHHXbAQZvIxkEN_jRckE2rh5gOQfQW9tL_2wEkBQLwZm_vg2UMQM54UpRxPAur8HkTeJX9F67O_CFOHM0yoFPcinuuW5g_B4aVcrAJTT5od_XgzQWgAJ3CJvXrG_v116df-eiAFJtUBFNSPzDI70W5TY4_NdYA5wWD04bW4VGMpEZ4mxwcSIWIqRpsDFYFLTYfE_tVyigbUPVa7AyPGpMK9WgRZDhSm9-02G3"/>
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-low" data-alt="small circular avatar of a stylized gamer profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_hZgc8TGcATL8Nf9HxC_op_EIp3BQG7OGtaZWoKLnSARgoCwl4Wg8XKRu8rskcLoQIvkWq193QsiDA64zu15oafvCJJVmBhpOjf709eozOr03PHWsuPc6YWarHM_N4fUcrDSVcQETaFWY1lVpTz6gV1mYcLgIBGLKf7hVT_a78wXICi-W4IiYBqRflZfSRDhnExEia2Bg7M4ujm4o1_EeF9pOWHJNPpWdrfTJuBkpRiOAJ-3M25mfRlM_gbql0Y5Cu-Nq-qnswgCg"/>
+</div>
+<span class="text-on-surface-variant text-sm font-medium">12 friends online</span>
+</div>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Recommended Rooms (Primary Focus) -->
+<section class="col-span-8 space-y-6">
+<div class="flex justify-between items-center">
+<h2 class="text-xl font-bold tracking-tight text-on-surface">Recommended Rooms</h2>
+<a class="text-primary text-sm font-bold hover:underline" href="#">View all</a>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<!-- Room Card 1 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300">
+<div class="h-48 bg-cover bg-center relative" data-alt="abstract futuristic cyberpunk city at night with neon purple and blue lights, high depth of field" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAoHMLuVqHzGVn0C5INWG5hOFEJtJ0p3f-FwHsQb4usmKwokhAaAaFqjMCe39-nKQ7SgaJA_gc0VcwDfaG-MYPNWejpYnUry4-glYtdR4IwGaxWBRjl4z_CsIxClYYAPwPJLOi0fHBRRs6Rmu1NkK0EEzPn7YmDysrTsOuMmn4BU25WYRf1-1rVzxMVyo2TlkkeOKweNjX4tA1XbuOIQNq5jZZ4QR-k59INlpWbRQLyZIB7JAEwwWofVJOk7Uo-fIGhp89CGLL1m0SH')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
+<div class="absolute top-4 left-4 bg-primary px-3 py-1 rounded text-on-primary text-[10px] font-black uppercase">Live Now</div>
+</div>
+<div class="p-6">
+<h3 class="text-lg font-bold mb-2">Cyber Strike Elite</h3>
+<p class="text-on-surface-variant text-sm mb-4">Tactical 5v5 lobby. Tier-2 requirements. No toxicity allowed.</p>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-base">groups</span>
+<span class="text-xs font-bold">8/10 Players</span>
+</div>
+<button class="bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary px-4 py-2 rounded-lg text-xs font-bold transition-colors">JOIN ROOM</button>
+</div>
+</div>
+</div>
+<!-- Room Card 2 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300">
+<div class="h-48 bg-cover bg-center relative" data-alt="dark fantasy dungeon atmosphere with glowing orange embers and dramatic shadows, cinematic lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAjD0rxBnW0u_HbKd-mh982vtWR2qZq3qNttV3rUJFk9Bp9cBDo-s1LuSWPzFufC2nopBTG9li1EGwp_-DgzLcpVySkFg01cMDht2Hv_1mdMHyN0PmORLGezNOquHfOhpPzaOaDasRg90j7a4ol3Ax-qRQ_OdlCYDxJKdBc650DGvroFFtHNcB8PUrkjMLo0HZc6NQPqLVKJXgWislNiMPtQi7EJxRBpSfrTkkAHUqs100YkkiAmTRUxhOzQ30rMHcxyDf94fs8Mnm7')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
+<div class="absolute top-4 left-4 bg-secondary px-3 py-1 rounded text-on-secondary text-[10px] font-black uppercase">Starts Soon</div>
+</div>
+<div class="p-6">
+<h3 class="text-lg font-bold mb-2">Mythic Raids Night</h3>
+<p class="text-on-surface-variant text-sm mb-4">Legendary loot focus. Bring your best gear and strategy.</p>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-base">groups</span>
+<span class="text-xs font-bold">14/20 Players</span>
+</div>
+<button class="bg-secondary-container hover:bg-secondary text-on-secondary-container hover:text-on-secondary px-4 py-2 rounded-lg text-xs font-bold transition-colors">RESERVE SPOT</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Waiting Rooms -->
+<div class="pt-6">
+<h2 class="text-xl font-bold tracking-tight text-on-surface mb-6">Active Waiting Rooms</h2>
+<div class="grid grid-cols-3 gap-4">
+<!-- Quick Join Card 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl flex items-center gap-4 hover:bg-surface-container-high cursor-pointer transition-colors border border-outline-variant/10">
+<div class="w-12 h-12 bg-[#4A1FA1]/20 rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">skull</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">Diablo IV</h4>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-wider">3 Rooms Ready</span>
+</div>
+</div>
+<!-- Quick Join Card 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl flex items-center gap-4 hover:bg-surface-container-high cursor-pointer transition-colors border border-outline-variant/10">
+<div class="w-12 h-12 bg-[#4A1FA1]/20 rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">swords</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">Elden Ring</h4>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-wider">12 Co-op Lobbies</span>
+</div>
+</div>
+<!-- Quick Join Card 3 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl flex items-center gap-4 hover:bg-surface-container-high cursor-pointer transition-colors border border-outline-variant/10">
+<div class="w-12 h-12 bg-[#4A1FA1]/20 rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">target</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">CS2</h4>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-wider">High Skill Match</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sidebar Content -->
+<aside class="col-span-4 space-y-8">
+<!-- Upcoming Sessions Widget -->
+<section class="bg-surface-container-low rounded-xl p-6 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-5">
+<span class="material-symbols-outlined text-6xl">event</span>
+</div>
+<h3 class="text-sm font-black uppercase tracking-[0.2em] text-on-surface-variant mb-6">Upcoming Sessions</h3>
+<div class="space-y-6">
+<!-- Session 1 -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-2 h-2 rounded-full bg-primary mb-2 shadow-[0_0_8px_#4a1fa1]"></div>
+<div class="w-px h-full bg-outline-variant/30"></div>
+</div>
+<div class="pb-2">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-xs font-bold text-primary">Starting in 20 min</span>
+</div>
+<h4 class="font-bold">Valorant Scrims</h4>
+<p class="text-xs text-on-surface-variant">Host: Team_Zephyr • Competitive</p>
+</div>
+</div>
+<!-- Session 2 -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-2 h-2 rounded-full bg-outline-variant mb-2"></div>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="text-xs font-bold text-on-surface-variant">Tomorrow, 18:00</span>
+</div>
+<h4 class="font-bold">Dungeon Raid</h4>
+<p class="text-xs text-on-surface-variant">Host: Raiding_Kings • Social</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 py-3 text-xs font-bold uppercase tracking-widest border border-outline-variant/30 rounded-lg hover:bg-surface-container-high transition-colors">View Schedule</button>
+</section>
+<!-- Global Activity Feed -->
+<section class="bg-surface-container-lowest rounded-xl p-6">
+<h3 class="text-sm font-black uppercase tracking-[0.2em] text-on-surface-variant mb-6">Global Activity</h3>
+<div class="space-y-6">
+<!-- Activity 1 -->
+<div class="flex gap-4 items-start">
+<div class="w-8 h-8 rounded-full overflow-hidden shrink-0">
+<img alt="Slayer_X" data-alt="gamer profile avatar with cool aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACrAlEKklVD3_zOQa95Rh-uG8AA5LUU3V3iPjGs6dGf9LrWTbgiREk9FzxZZ14qcqVyTeOrZzMRHH4ZDHNjj9-7CB1yFvPNptkqsHqxsZ1O-Al5bnWplQ1FM_2yL2dzhYrSJF5HMV4GEWSQbN4pd40NpVQHN3jDmU6bq7yYiQIDLMrx1VMGYZkgvzGkipfytUb283evTJ_NB6etfJgTGyVxWe_nYtkolZvViYaE0-eEY_1VZSGo6kDGB3-jQewUPRvbBgI9OuwZyxd"/>
+</div>
+<div>
+<p class="text-sm">
+<span class="font-bold text-on-surface">Slayer_X</span>
+<span class="text-on-surface-variant">earned a badge</span>
+<span class="text-primary font-medium">"Unyielding"</span>
+</p>
+<span class="text-[10px] text-outline uppercase tracking-tighter">4 minutes ago</span>
+</div>
+</div>
+<!-- Activity 2 -->
+<div class="flex gap-4 items-start">
+<div class="w-8 h-8 rounded-full overflow-hidden shrink-0">
+<img alt="Luna_Wolf" data-alt="gamer profile avatar with wolf hoodie" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD7i8UYfw-iK_9_46H7-hEZBdjh2Ioj9B0SuaBp3k4BpwBI1aK1gZEmhtBgJ8GEXKo3pBapDliCI9SFZmeFI-RpJ9NYed-NclOn96Sac8TVlneOLKy-xDkH1BHfEwTH87cTZYEo9_C5nxncbBR-Ae7W5Ro-u0v_7B9c4VfRQBMUAPoCvQWSswvzlBO2w64P-fXSE6fgKysi9cezi7npDidZM_4d874AdDf_cMvncGmJ5iubh110P3cAW9zLd2bL7BRTQXiwu36xozC"/>
+</div>
+<div>
+<p class="text-sm">
+<span class="font-bold text-on-surface">Luna_Wolf</span>
+<span class="text-on-surface-variant">started a discussion:</span>
+<span class="text-secondary italic">"Season 4 Meta?"</span>
+</p>
+<span class="text-[10px] text-outline uppercase tracking-tighter">12 minutes ago</span>
+</div>
+</div>
+<!-- Activity 3 -->
+<div class="flex gap-4 items-start">
+<div class="w-8 h-8 rounded-full overflow-hidden shrink-0">
+<img alt="Ghost" data-alt="mysterious gamer profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNPkh9QRNOM64hKN49GvigTO5FhsNs6tOEkuYgN6y3V_Xx70YeGWC3LW09k9fNzwAg73tXmPihwMTD0r47iYM_QE-V1T9I2KOKaM3gl5e_shg6mwT8fcWbYn-5nWhFUgKQoKKnJ9eP89VCWV8DbeLqIQQ2OUgosFgEpuvWBViBUmDVbWl83YsLd_aS2auamE8TMyIpY7N57WlepviTlsVQndm_4GUX1U-5oJy4qrKl5HkXyeQSsM3gPuN99qa0soJY6A-pJJlxu8Hh"/>
+</div>
+<div>
+<p class="text-sm">
+<span class="font-bold text-on-surface">Ghost_Prime</span>
+<span class="text-on-surface-variant">uploaded a new</span>
+<span class="text-primary font-medium">Highlight Clip</span>
+</p>
+<span class="text-[10px] text-outline uppercase tracking-tighter">25 minutes ago</span>
+</div>
+</div>
+</div>
+</section>
+</aside>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="ml-64 bg-[#131313] border-t border-[#cbc3d5]/15 py-12 px-8 mt-12">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto w-full">
+<div class="mb-6 md:mb-0">
+<span class="text-lg font-bold text-[#e5e2e1] font-['Plus_Jakarta_Sans']">joga-together</span>
+<p class="text-[10px] text-[#cbc3d5]/60 mt-1 uppercase tracking-widest">The Digital Sanctuary for Gamers</p>
+</div>
+<div class="flex gap-8 mb-6 md:mb-0">
+<a class="text-[#cbc3d5]/60 hover:text-[#cfbcff] text-xs font-['Plus_Jakarta_Sans'] transition-colors" href="#">Legal</a>
+<a class="text-[#cbc3d5]/60 hover:text-[#cfbcff] text-xs font-['Plus_Jakarta_Sans'] transition-colors" href="#">Privacy</a>
+<a class="text-[#cbc3d5]/60 hover:text-[#cfbcff] text-xs font-['Plus_Jakarta_Sans'] transition-colors" href="#">Careers</a>
+<a class="text-[#cbc3d5]/60 hover:text-[#cfbcff] text-xs font-['Plus_Jakarta_Sans'] transition-colors" href="#">Contact</a>
+</div>
+<div class="text-[#cbc3d5]/60 text-[10px] font-['Plus_Jakarta_Sans']">
+                © 2024 Joga Together. All rights reserved.
+            </div>
+</div>
+</footer>
+<!-- FAB (Suppressed based on context: Dashboard usually has one for core action) -->
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-br from-[#4a1fa1] to-[#cfbcff] text-on-primary-container rounded-full shadow-[0_12px_24px_rgba(74,31,161,0.4)] flex items-center justify-center group hover:scale-110 transition-transform z-40">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">add</span>
+<div class="absolute right-20 bg-surface-container-high px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap text-xs font-bold uppercase tracking-widest border border-outline-variant/20">
+            Quick Create Room
+        </div>
+</button>
+<script src="/js/main.js"></script>
+<script src="/js/pages/dashboard.js"></script>
+</body>
+</html>
