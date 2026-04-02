@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Joga Together | Room Details</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="/js/tailwind.config.js"></script>
+<link rel="stylesheet" href="/css/style.css"/>
+<style>
+    .glass-effect { backdrop-filter: blur(20px); background: rgba(58, 57, 57, 0.2); }
+    .pulse-glow { box-shadow: 0 0 15px rgba(207, 188, 255, 0.3); }
+    .text-glow { text-shadow: 0 0 10px rgba(207, 188, 255, 0.5); }
+</style>
+</head>
+<body class="overflow-x-hidden">
+<!-- Side Navigation Shell -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#0e0e0e] shadow-[4px_0px_24px_rgba(0,0,0,0.5)] z-50 hidden md:flex flex-col py-8 gap-2">
+<div class="px-6 mb-10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface leading-tight">Joga Player</h3>
+<p class="text-[10px] uppercase tracking-widest text-primary font-bold">Elite Tier</p>
+</div>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">home</span> Home
+      </a>
+<a class="bg-gradient-to-r from-[#4a1fa1]/20 to-transparent text-[#cfbcff] border-l-4 border-[#4a1fa1] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest transition-all duration-200 flex items-center gap-4" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span> Explore Rooms
+      </a>
+<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">add_circle</span> Create Room
+      </a>
+<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">calendar_today</span> Schedule
+      </a>
+<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">sports_esports</span> Games
+      </a>
+<div class="my-4 mx-6 border-t border-outline-variant opacity-15"></div>
+<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">notifications</span> Notifications
+      </a>
+<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">person</span> Profile
+      </a>
+<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">settings</span> Settings
+      </a>
+</nav>
+</aside>
+<!-- Top AppBar Shell (Mobile Only) -->
+<header class="md:hidden sticky top-0 z-40 bg-[#131313] w-full flex justify-between items-center px-8 py-4">
+<div class="text-xl font-bold tracking-tighter text-[#e5e2e1] font-['Plus_Jakarta_Sans']">joga-together</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#cbc3d5]">notifications</span>
+<div class="w-8 h-8 rounded-full overflow-hidden">
+<img alt="User Profile" data-alt="close-up portrait of a young man with a focused expression, warm cinematic lighting, dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVPpw75Pd1Xbd1-DspL1p0SygYcCdNI5R8YqqVy3x8G_XZ-N2MPn5a57WGU82dTgtn8oR1QlNImLad4a8LCgs_GJLXcK173diVAEI2FZg3g6C4j-FhB6Y3pPRlRjjcMB44ds9GoZcQQdIz4YotsavAQgx8KWNJXaBGtfrzFJmcpHG_v2k91D3w0S_8b-A9gD-R05E1Orr07N-6cTVGjmwUAJN6BZbG_atXiRI92jPdhwnVYy_cqAbyxLR5D3YLefrDWgAdpg3zeLDJ"/>
+</div>
+</div>
+</header>
+<main class="md:ml-64 min-h-screen">
+<!-- Hero Header -->
+<section class="relative h-[614px] w-full overflow-hidden">
+<img alt="Neon Protocol: Strike Artwork" class="absolute inset-0 w-full h-full object-cover" data-alt="cinematic action scene from a cyberpunk first-person shooter game with neon lights, futuristic armor, and intense blue and purple atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYoQFF9wZw6gyG4wttdj1zZTqWoJN26lXErA3RUlN5IGLU-opdMY7Y01J3HtTAIj8oSE_p_mQjuGkh0DVxaUuJ1-NkwFn0Ixm9n4px6Qd_AO6vV-PTnhr341PmhHhqRmYf_epKvYKAVSA3rHYPbhN8uYegKqPxa9v9W8_R0pK0KeWmfgS1FOvkjaBcT7Ypy9GO6-K_ZAv9hrYeyhUY8YRhTmA-MigDiudPE7Uw6NWb6ol9bRDFg0w0f_95pvNC3KWSFoZz7g3G8qXD"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#131313] via-[#131313]/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 md:p-12">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest">Live Now</span>
+<span class="text-on-surface-variant text-sm font-medium tracking-tight">Competitive Tier • Room #8842</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-bold text-on-surface tracking-tighter leading-none">Neon Protocol: Strike</h1>
+<div class="flex items-center gap-4 mt-6">
+<div class="flex items-center gap-3 bg-surface-container-lowest/50 px-4 py-2 rounded-lg border border-outline-variant/10">
+<img alt="Host Avatar" class="w-10 h-10 rounded-full" data-alt="portrait of a gamer wearing professional headphones in a dimly lit room with purple backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqnvu7Uyoxs5GzBAbuSI97t2QDU2aie_m6UshtI2fkGLc7TU34lqYs88r_9xQbzw64lNfN5cVnW9qsKAP95kRHtk_nqrB9Sgd-BqxmQAyqV6WkyLB2QG240c3U9rGnBnzrdWThGcjScl9mJtH67vuL33Zc3iBxfvCFVnbrong_rrFuY3T_779pc6CEPg1SUTqrM5oSZGat3mtXmeIu06isNIuZO-c6fIbR22at7_ChLRqEEuH19orxceZvwAc_0XEBr6CiQEhjjsaT"/>
+<div>
+<p class="text-xs text-on-surface-variant">Hosted by</p>
+<p class="text-sm font-bold text-on-surface">Vortex_Striker</p>
+</div>
+</div>
+<div class="h-8 w-px bg-outline-variant/20 hidden md:block"></div>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-base">group</span>
+<span>3 / 5 Slots Filled</span>
+</div>
+</div>
+</div>
+<button class="bg-gradient-to-br from-[#4a1fa1] to-[#cfbcff] text-on-primary-fixed-variant font-bold px-10 py-4 rounded-lg shadow-xl hover:scale-[1.02] transition-transform flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">person_add</span>
+            Request to Join
+          </button>
+</div>
+</div>
+</section>
+<!-- Main Content Bento Grid -->
+<section class="max-w-7xl mx-auto p-8 md:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Stats & Party -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Quick Stats Bento -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center justify-center text-center gap-2 group hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-1">public</span>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Region</span>
+<span class="font-bold text-on-surface">Europe Central</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center justify-center text-center gap-2 group hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-1">translate</span>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Language</span>
+<span class="font-bold text-on-surface">English / German</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border border-primary/20 flex flex-col items-center justify-center text-center gap-2 group hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-1" style="font-variation-settings: 'FILL' 1;">forum</span>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Communication</span>
+<span class="font-bold text-primary">Discord Required</span>
+</div>
+</div>
+<!-- Party Status -->
+<div class="space-y-6">
+<div class="flex justify-between items-center">
+<h3 class="text-xl font-bold tracking-tight text-on-surface">Current Party</h3>
+<span class="text-xs text-on-surface-variant">2 Open Positions</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Member 1 (Host) -->
+<div class="bg-surface-container-high p-4 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="Member" class="w-12 h-12 rounded-lg" data-alt="portrait of a young gamer with purple neon light reflecting on their face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF5K1FkLNegFniyNMhkLk2srIDeBuwjDVjdaItlhSNPsp6wH956y7ea9ko6vjj9ytrLNfXWGeoEvmdSfclO9AeIs8jgptGNfLE7oyl-xwAl9Umm_sLmP6ukZkd4dMPT86AvdCRAnY9zfm1U_sLJEZkGOdIboNDWpNcg3UsaScdziiTPJgZI2MJfcy_YSpFwDjz_3FWQeZByVqJ9meJJfu_9fHT-hwNr4eOoZBvp0vGoqJggsj6D6t7r8c85aA9G3nhPA-vSC4FCt7k"/>
+<div class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-on-primary text-[8px] flex items-center justify-center rounded-full border-2 border-surface-container-high font-bold">★</div>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Vortex_Striker</h4>
+<p class="text-[10px] uppercase tracking-widest text-primary">Host / Entry Fragger</p>
+</div>
+</div>
+<div class="px-3 py-1 bg-surface-container-highest rounded text-[10px] font-mono text-on-surface-variant">LVL 84</div>
+</div>
+<!-- Member 2 -->
+<div class="bg-surface-container-high p-4 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-4">
+<img alt="Member" class="w-12 h-12 rounded-lg" data-alt="portrait of a man with minimalist gaming headphones and soft blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC-tNu9gR4Z8UGY06xwk8vRm9RSIoYj5pjKAdkTMJfJCBLOMGzUS9--f-e0GYGLcPhi3eXCtfd7YV7DFXJLzEDR0LP6RAxqPRGor-GKQiEsKjyhmezoRg3O9s2T2DK5LA-jNau187EqduAzDkCOZ5vUk2AxB5TGyNuKRTJd5hqxfMXZnhsDJ68B6QTngFS5YjLuVKrrhXWhuZAoVuH6ey5tkJuXHgEcNqdcuKoYDhYeAB6AFV0Vobm0zYHtGC5Ehg37Dy9kd4RG-se"/>
+<div>
+<h4 class="font-bold text-on-surface">ShadowStep_99</h4>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Support / Medic</p>
+</div>
+</div>
+<div class="px-3 py-1 bg-surface-container-highest rounded text-[10px] font-mono text-on-surface-variant">LVL 42</div>
+</div>
+<!-- Member 3 -->
+<div class="bg-surface-container-high p-4 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-4">
+<img alt="Member" class="w-12 h-12 rounded-lg" data-alt="portrait of a man with glasses and serious expression in a modern gaming setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4nFn4OkLvyVN_rLrLPJtOiZbR8ev0GqqnbzhhK3lmIKz-3Dtnogo0lik285DGTnybNfxNRiV56OhC_soTZoOaBDSq8OAZtoHzhErTmCQucn91CC-3V_IL96Tug5cfTt6BMG7kWsR06KhemSd0YzT_N7QE1YKx5Jr6NPkZfjhRzGOIEA4zNJIvrdbEReLV40Kqow6bPs9Crr4eVjhYXnqZwwgANgiKAZFb5f0tWd_12R6_cOR1S6g9l8YI0EtAeL8_LPXa0ElV5MLu"/>
+<div>
+<h4 class="font-bold text-on-surface">Lunar_Nexus</h4>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Tactician</p>
+</div>
+</div>
+<div class="px-3 py-1 bg-surface-container-highest rounded text-[10px] font-mono text-on-surface-variant">LVL 105</div>
+</div>
+<!-- Slot 4 (Awaiting) -->
+<div class="bg-surface-container-lowest border-2 border-dashed border-outline-variant/20 p-4 rounded-xl flex items-center justify-center group hover:border-primary/40 transition-colors">
+<div class="text-center">
+<span class="material-symbols-outlined text-outline-variant mb-1 group-hover:text-primary">person_add</span>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant group-hover:text-primary">Awaiting Player...</p>
+</div>
+</div>
+<!-- Slot 5 (Awaiting) -->
+<div class="bg-surface-container-lowest border-2 border-dashed border-outline-variant/20 p-4 rounded-xl flex items-center justify-center group hover:border-primary/40 transition-colors">
+<div class="text-center">
+<span class="material-symbols-outlined text-outline-variant mb-1 group-hover:text-primary">person_add</span>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant group-hover:text-primary">Awaiting Player...</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Room Activity -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<div class="bg-surface-container-low rounded-xl flex flex-col h-full min-h-[500px]">
+<div class="p-6 border-b border-outline-variant/10 flex items-center justify-between">
+<h3 class="font-bold text-on-surface tracking-tight">Room Activity</h3>
+<span class="pulse-glow w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</div>
+<div class="flex-grow p-6 overflow-y-auto space-y-6">
+<!-- Feed Item -->
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">login</span>
+</div>
+<div>
+<p class="text-xs text-on-surface leading-snug">
+<span class="font-bold">ShadowStep_99</span> joined the lobby
+                </p>
+<span class="text-[10px] text-on-surface-variant">2 mins ago</span>
+</div>
+</div>
+<!-- Message Item -->
+<div class="flex gap-4">
+<img alt="Vortex" class="w-8 h-8 rounded" data-alt="small thumbnail of a gamer's avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOalphfUObxWxMZRq02ZiLY_fUrS2bifU4FkcNtcJuwoof2G_1DWbF8Dlkfm_-jhIgyp6Ua1BoaZj58dPe1E3GObY9DWkozJ-y1KkVdwPuf2yHKt-eJqGVfiBfzhr_5SKRxVw5_6hYKLbmj_pgdgXmhDGHsI-pFDWb6dBHlgP-UClwDawvIQyVX8IX9erXG2KLlgxksFVDTc7wnoRYMVUNweNdAYQzfTwwSwK2HGwvd87HAbfnd0oMmEDY3rWh6KEfQ_VXnFvf8Sf1"/>
+<div class="bg-surface-container-high p-3 rounded-lg rounded-tl-none">
+<p class="text-[10px] font-bold text-primary mb-1 uppercase tracking-tighter">Vortex_Striker</p>
+<p class="text-xs text-on-surface">Anyone got a high-level medic profile? We're heading into Tier 4 raids tonight.</p>
+<span class="text-[8px] text-on-surface-variant mt-2 block text-right">Just now</span>
+</div>
+</div>
+<!-- Feed Item -->
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">settings_input_component</span>
+</div>
+<div>
+<p class="text-xs text-on-surface leading-snug">
+                  Room difficulty updated to <span class="text-primary font-bold">HARDCORE</span>
+</p>
+<span class="text-[10px] text-on-surface-variant">15 mins ago</span>
+</div>
+</div>
+<!-- Message Item -->
+<div class="flex gap-4">
+<img alt="Shadow" class="w-8 h-8 rounded" data-alt="small thumbnail of a gamer's avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgg7rpGC46iCYe4f1NqYqQegASFqgAxX5L25bmOvzeWJGXw1FV_c3iotpeJGK2ZwkkagZ5Wa4s3EViQ4zmIdk5q-ayYbrp3vC8z3pLxAi8tSVOTyoNKVYDhGrMrZxrD5z_0UroMzjDIIQBKHZoVnkxaWJsTK4JHwzJKCyvaCeO52ORSOzWmsSlLc1Qoo-WGjm92TKWqH0TvIk7thLvINjCe3AzObqWYGhy3cuk443lKeEKrC0aZElczCbaWB1ASinPHY5XsdlZkc9C"/>
+<div class="bg-surface-container-high p-3 rounded-lg rounded-tl-none">
+<p class="text-[10px] font-bold text-on-surface-variant mb-1 uppercase tracking-tighter">ShadowStep_99</p>
+<p class="text-xs text-on-surface">I can flex to medic if we find another entry fragger.</p>
+<span class="text-[8px] text-on-surface-variant mt-2 block text-right">8 mins ago</span>
+</div>
+</div>
+</div>
+<!-- Interaction Box -->
+<div class="p-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-2 bg-surface-container-lowest px-4 py-2 rounded-lg">
+<span class="material-symbols-outlined text-on-surface-variant text-base">emoji_emotions</span>
+<input class="bg-transparent border-none focus:ring-0 text-xs w-full text-on-surface placeholder:text-on-surface-variant" placeholder="Type to chat..." type="text"/>
+<span class="material-symbols-outlined text-primary cursor-pointer">send</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Requirements Section -->
+<section class="max-w-7xl mx-auto px-8 md:px-12 pb-24">
+<div class="bg-surface-container-lowest p-8 rounded-2xl border-l-4 border-primary">
+<h3 class="text-lg font-bold text-on-surface mb-6">Room Guidelines &amp; Requirements</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="space-y-2">
+<h4 class="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">verified_user</span> Behavioral Protocol
+            </h4>
+<p class="text-sm text-on-surface-variant">Zero tolerance for toxic behavior. This is a strategic focus room. Maintain clear comms and positive reinforcement.</p>
+</div>
+<div class="space-y-2">
+<h4 class="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">lan</span> Technical Specs
+            </h4>
+<p class="text-sm text-on-surface-variant">Stable ping under 60ms is required for competitive play. High-speed fiber connection preferred.</p>
+</div>
+<div class="space-y-2">
+<h4 class="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">military_tech</span> Gear Check
+            </h4>
+<p class="text-sm text-on-surface-variant">Level 5+ equipment only. Players under the equipment threshold will be automatically filtered.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Shell -->
+<footer class="bg-[#131313] w-full py-12 px-8 border-t border-[#cbc3d5]/15">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
+<div class="flex flex-col gap-4 mb-8 md:mb-0">
+<div class="text-lg font-bold text-[#e5e2e1] font-['Plus_Jakarta_Sans']">joga-together</div>
+<p class="font-['Plus_Jakarta_Sans'] text-xs text-[#cbc3d5]/60">© 2024 Joga Together. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-[#cbc3d5]/60 hover:text-[#cfbcff] transition-colors" href="#">Legal</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-[#cbc3d5]/60 hover:text-[#cfbcff] transition-colors" href="#">Privacy</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-[#cbc3d5]/60 hover:text-[#cfbcff] transition-colors" href="#">Careers</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-[#cbc3d5]/60 hover:text-[#cfbcff] transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</main>
+<!-- Mobile Navigation Shell -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#0e0e0e] shadow-[0px_-4px_24px_rgba(0,0,0,0.5)] flex justify-around items-center py-4">
+<a class="flex flex-col items-center gap-1 text-[#cbc3d5]" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[8px] uppercase tracking-tighter">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#cfbcff]" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="text-[8px] uppercase tracking-tighter">Explore</span>
+</a>
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center -mt-8 border-4 border-[#0e0e0e] shadow-lg">
+<span class="material-symbols-outlined text-on-primary-container">add</span>
+</div>
+<a class="flex flex-col items-center gap-1 text-[#cbc3d5]" href="#">
+<span class="material-symbols-outlined">sports_esports</span>
+<span class="text-[8px] uppercase tracking-tighter">Games</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#cbc3d5]" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[8px] uppercase tracking-tighter">Profile</span>
+</a>
+</nav>
+<script src="/js/main.js"></script>
+<script src="/js/pages/room-details.js"></script>
+</body>
+</html>
