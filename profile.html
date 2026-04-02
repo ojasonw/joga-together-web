@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Joga Together | Profile</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="/js/tailwind.config.js"></script>
+<link rel="stylesheet" href="/css/style.css"/>
+<style>
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: #0e0e0e; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #4a1fa1; border-radius: 10px; }
+</style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30 min-h-screen">
+
+<!-- SideNavBar (Desktop) -->
+<aside class="hidden md:flex flex-col py-8 gap-2 h-screen w-64 fixed left-0 top-0 bg-[#0e0e0e] shadow-[4px_0px_24px_rgba(0,0,0,0.5)] z-50">
+<div class="px-6 mb-10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary-container to-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container">sports_esports</span>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface text-sm">Joga Player</p>
+<p class="text-[10px] text-primary tracking-[0.2em] uppercase font-semibold">Elite Tier</p>
+</div>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-4 text-[#cbc3d5] px-6 py-3 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span> Home
+            </a>
+<a class="flex items-center gap-4 text-[#cbc3d5] px-6 py-3 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span> Explore Rooms
+            </a>
+<a class="flex items-center gap-4 text-[#cbc3d5] px-6 py-3 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span> Create Room
+            </a>
+<a class="flex items-center gap-4 text-[#cbc3d5] px-6 py-3 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span> Schedule
+            </a>
+<div class="my-4 mx-6 h-px bg-outline-variant/15"></div>
+<a class="flex items-center gap-4 bg-gradient-to-r from-[#4a1fa1]/20 to-transparent text-[#cfbcff] border-l-4 border-[#4a1fa1] px-6 py-3 transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span> Profile
+            </a>
+<a class="flex items-center gap-4 text-[#cbc3d5] px-6 py-3 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span> Settings
+            </a>
+</nav>
+</aside>
+<!-- Main Content Area -->
+<main class="md:ml-64 flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-40 bg-[#131313] dark:bg-[#0e0e0e] flex justify-between items-center px-8 py-4 w-full shadow-none">
+<div class="flex items-center gap-8">
+<h1 class="text-xl font-bold tracking-tighter text-[#e5e2e1] font-['Plus_Jakarta_Sans']">joga-together</h1>
+<nav class="hidden lg:flex gap-6">
+<a class="text-[#cbc3d5] hover:text-[#e5e2e1] transition-colors duration-300 font-['Plus_Jakarta_Sans'] tracking-tight" href="#">Home</a>
+<a class="text-[#cbc3d5] hover:text-[#e5e2e1] transition-colors duration-300 font-['Plus_Jakarta_Sans'] tracking-tight" href="#">Explore Rooms</a>
+<a class="text-[#cbc3d5] hover:text-[#e5e2e1] transition-colors duration-300 font-['Plus_Jakarta_Sans'] tracking-tight" href="#">Schedule</a>
+<a class="text-[#cfbcff] font-semibold border-b-2 border-[#4A1FA1] pb-1 font-['Plus_Jakarta_Sans'] tracking-tight" href="#">Profile</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant text-sm" data-icon="search">search</span>
+<input class="bg-surface-container-lowest border-none rounded-lg pl-10 pr-4 py-2 text-sm text-on-surface focus:ring-1 focus:ring-primary w-64" placeholder="Search players..." type="text"/>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#2a2a2a] text-[#cbc3d5] transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<img alt="User profile" class="w-8 h-8 rounded-full border border-primary/20" data-alt="Close-up professional studio portrait of a young man with a confident expression in cinematic moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7h9Cw1XFrhqxa1W906WcDfxMNS2jdsEsibdDO1fI7I_mF0Ro5TLtjHTuOTbqxUlLlPTAjr_vzsWIxZ-nBaO5rABYhMv0st6CCIv7nFK844UKO1srfvoa98JzKTLA4ohH05cdb8G2GhA1J90yaJY66IRrpkBBSE8OnWgUC689w2Ko_vuy-Ar0yLa_25-qc-iGcv5kmVk2u4aPmSO_GNaCz311wVRWo7ttcjvZL8l8MiCB89RelFdLoyj4MKt-LazxyPk9dUpusfvHX"/>
+</div>
+</header>
+<!-- Profile Hero Section -->
+<section class="px-8 pt-12 pb-8 max-w-7xl mx-auto w-full">
+<div class="flex flex-col md:flex-row items-center md:items-end gap-8 mb-12">
+<div class="relative group">
+<div class="absolute inset-0 bg-primary/20 blur-2xl rounded-full group-hover:bg-primary/30 transition-all duration-500"></div>
+<img alt="Kaelen Vance" class="w-32 h-32 md:w-40 md:h-40 rounded-3xl object-cover relative z-10 border-2 border-outline-variant/10" data-alt="Detailed professional portrait of a man with clean grooming and a sharp gaze, looking directly at camera, dark aesthetic background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaAyoiRIbNP8bqUi5bXVvrkXSvBZUONjASkkpHvNNqndBYGn8QIk5peZdozP9c8ZFqojfXVpUoXZMyJPXJFFErKBDDNej1EuTT4NWDmwGxeMSr6j6foeW4lkxOJlVr6siuI0Z7qthYtmpMNacUdrtz0Ci5Tq-oNaZoC2brW-GZEwoqY_rZM_3ulc_oXE4YT4QpYtLu13gIvWadxBaa716aHT9L24cG-mKz4yA8WD8Z97i2zIAmRMTkBaWuH9XllJlKvIS2N3cmVaRs"/>
+<button class="absolute bottom-2 right-2 z-20 bg-primary text-on-primary p-2 rounded-xl shadow-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-base" data-icon="edit">edit</span>
+</button>
+</div>
+<div class="flex-1 text-center md:text-left">
+<div class="flex flex-col md:flex-row md:items-center gap-4 mb-2">
+<h2 class="text-4xl md:text-5xl font-headline font-extrabold tracking-tight text-on-surface">Kaelen Vance</h2>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-primary-container/30 text-primary-fixed-dim rounded-full text-xs font-bold border border-primary/20 w-fit mx-auto md:mx-0">
+<span class="material-symbols-outlined text-sm" data-icon="verified" data-weight="fill">verified</span> ELITE PLAYER
+                        </span>
+</div>
+<div class="flex items-center justify-center md:justify-start gap-6 text-on-surface-variant">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest font-bold opacity-60 mb-1">Reputation Score</span>
+<span class="text-xl font-headline font-bold text-primary">2,480 <span class="text-xs font-normal text-on-surface-variant">pts</span></span>
+</div>
+<div class="w-px h-8 bg-outline-variant/20"></div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest font-bold opacity-60 mb-1">Matches Won</span>
+<span class="text-xl font-headline font-bold text-on-surface">156</span>
+</div>
+<div class="w-px h-8 bg-outline-variant/20"></div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest font-bold opacity-60 mb-1">Global Rank</span>
+<span class="text-xl font-headline font-bold text-on-surface">#412</span>
+</div>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-2.5 bg-gradient-to-br from-primary-container to-primary text-on-primary-container font-semibold rounded-lg hover:shadow-[0_0_20px_rgba(74,31,161,0.4)] transition-all duration-300">
+                        Save Changes
+                    </button>
+</div>
+</div>
+<!-- Bento Settings Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Favorite Games (Wide) -->
+<div class="lg:col-span-2 bg-surface-container-low rounded-xl p-6 flex flex-col gap-6">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="sports_esports">sports_esports</span>
+<h3 class="font-headline font-bold text-lg">Favorite Games</h3>
+</div>
+<button class="text-sm font-bold text-primary hover:underline">Manage All</button>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+<div class="group relative rounded-xl overflow-hidden aspect-video bg-surface-container-high border border-outline-variant/10">
+<img alt="Game 1" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Vibrant high-contrast action scene from a tactical first-person shooter game with futuristic neon aesthetics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT0-R0p4zTfaPs4KNODFXY89zyADLpqOUeAo6yjjx6zo2SUOEtZPtd76Pqj1BfC-9wIBtK3jP7ZMxlkhBh4IRSzEk6Yg0Yhu5YUT61MuYHnaKv9SZbKwSwbSG-PxNzDAcEuxZHrzdKk1JqnFo9Jb9CLhY-Jqrmctdm6pdLKtlE4fmGrWQeCQEN1v9q8fV0hy7MgqB4gmv04oBNPiaJjgVyealNxJ_LA4tQm6HjNEL3iEfyfHcHKsB8nktt_leCw4JPBA9nm6jozVbM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-3">
+<span class="text-xs font-bold">Apex Legends</span>
+</div>
+</div>
+<div class="group relative rounded-xl overflow-hidden aspect-video bg-surface-container-high border border-outline-variant/10">
+<img alt="Game 2" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Abstract atmospheric scene of a fantasy open world game with a large moon and floating islands in a purple sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWlT0DaRxi0vEgXKUcR5UeG3If3vW7tIwp6I484kRb4z4eJzUpAbVQwJHawI-jNkTAfSuqxDNqr61bzFfSsLs0efbKuhc3TilCNDbavPT69F2rYLeZ-EWv2WyR1QkkiV5OxGjAcYQDh5PPdw4Gh3P4vjQOM1F_WDrFSkQAxEqaEw-ac1tmuh9TB56g6KVuWgtIqNxxDwE2wCLsOE0eLeM-4BcxRmHJ9OhPy1Zq9vArvAYG052RrFxpItXyJqrI-37205J5_EGP7lRs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-3">
+<span class="text-xs font-bold">Elden Ring</span>
+</div>
+</div>
+<div class="group relative rounded-xl border-2 border-dashed border-outline-variant/30 aspect-video flex flex-col items-center justify-center gap-2 hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-outline-variant" data-icon="add">add</span>
+<span class="text-[10px] uppercase tracking-widest font-bold text-outline-variant">Add Game</span>
+</div>
+</div>
+</div>
+<!-- Play Style -->
+<div class="bg-surface-container-low rounded-xl p-6 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="psychology">psychology</span>
+<h3 class="font-headline font-bold text-lg">Play Style</h3>
+</div>
+<div class="flex flex-col gap-4">
+<label class="flex items-center justify-between p-3 bg-surface-container-high rounded-lg cursor-pointer group">
+<span class="text-sm font-medium">Competitive Focus</span>
+<div class="w-10 h-5 bg-primary rounded-full relative">
+<div class="absolute right-1 top-1 w-3 h-3 bg-on-primary rounded-full"></div>
+</div>
+</label>
+<label class="flex items-center justify-between p-3 bg-surface-container-high rounded-lg cursor-pointer group">
+<span class="text-sm font-medium">Ranked Only</span>
+<div class="w-10 h-5 bg-primary rounded-full relative">
+<div class="absolute right-1 top-1 w-3 h-3 bg-on-primary rounded-full"></div>
+</div>
+</label>
+<label class="flex items-center justify-between p-3 bg-surface-container-high rounded-lg cursor-pointer group border border-primary/20">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-primary">No Toxicity</span>
+<span class="text-[10px] text-on-surface-variant">Auto-mute flagged players</span>
+</div>
+<div class="w-10 h-5 bg-primary rounded-full relative">
+<div class="absolute right-1 top-1 w-3 h-3 bg-on-primary rounded-full"></div>
+</div>
+</label>
+</div>
+</div>
+<!-- Availability Grid -->
+<div class="lg:col-span-1 bg-surface-container-low rounded-xl p-6 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+<h3 class="font-headline font-bold text-lg">Availability</h3>
+</div>
+<div class="grid grid-cols-7 gap-2">
+<!-- Simplified representation of a week grid -->
+<div class="text-[9px] uppercase font-bold text-center opacity-40">M</div>
+<div class="text-[9px] uppercase font-bold text-center opacity-40">T</div>
+<div class="text-[9px] uppercase font-bold text-center opacity-40">W</div>
+<div class="text-[9px] uppercase font-bold text-center opacity-40">T</div>
+<div class="text-[9px] uppercase font-bold text-center opacity-40">F</div>
+<div class="text-[9px] uppercase font-bold text-center opacity-40">S</div>
+<div class="text-[9px] uppercase font-bold text-center opacity-40">S</div>
+<!-- Grid cells -->
+<div class="aspect-square bg-primary-container/20 border border-primary/10 rounded-sm"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm"></div>
+<div class="aspect-square bg-primary-container/40 border border-primary/20 rounded-sm"></div>
+<div class="aspect-square bg-primary-container/60 border border-primary/40 rounded-sm"></div>
+<div class="aspect-square bg-surface-container-high rounded-sm"></div>
+<div class="aspect-square bg-primary-container border border-primary rounded-sm"></div>
+<div class="aspect-square bg-primary-container border border-primary rounded-sm"></div>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">Preferred play times are centered around <span class="text-on-surface font-bold">19:00 - 23:00 GMT</span> during weekdays and <span class="text-on-surface font-bold">Late Night</span> on weekends.</p>
+</div>
+<!-- Global Prefs -->
+<div class="lg:col-span-2 bg-surface-container-low rounded-xl p-6 flex flex-col gap-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="public">public</span>
+<h3 class="font-headline font-bold text-lg">Global Preferences</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div>
+<p class="text-[10px] uppercase tracking-widest font-bold text-outline-variant mb-4">Genres</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-medium border border-outline-variant/10">FPS</span>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold border border-primary/20">RPG</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-medium border border-outline-variant/10">MOBA</span>
+</div>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest font-bold text-outline-variant mb-4">Platforms</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold border border-primary/20">PC Master Race</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-medium border border-outline-variant/10">PlayStation 5</span>
+</div>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest font-bold text-outline-variant mb-4">Languages</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold border border-primary/20">English</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-medium border border-outline-variant/10">Japanese</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Privacy & Alerts -->
+<div class="lg:col-span-3 bg-surface-container-low rounded-xl p-6 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="security">security</span>
+<h3 class="font-headline font-bold text-lg">Privacy &amp; Alerts</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-outline-variant">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">Public Profile</span>
+<span class="text-[10px] text-on-surface-variant">Visible to all players</span>
+</div>
+<div class="ml-auto w-10 h-5 bg-primary rounded-full relative">
+<div class="absolute right-1 top-1 w-3 h-3 bg-on-primary rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-outline-variant">
+<span class="material-symbols-outlined" data-icon="notifications_active">notifications_active</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">Match Alerts</span>
+<span class="text-[10px] text-on-surface-variant">Desktop push notifications</span>
+</div>
+<div class="ml-auto w-10 h-5 bg-primary rounded-full relative">
+<div class="absolute right-1 top-1 w-3 h-3 bg-on-primary rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-outline-variant">
+<span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">Email Digest</span>
+<span class="text-[10px] text-on-surface-variant">Weekly stats &amp; community</span>
+</div>
+<div class="ml-auto w-10 h-5 bg-surface-variant rounded-full relative">
+<div class="absolute left-1 top-1 w-3 h-3 bg-outline rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-outline-variant">
+<span class="material-symbols-outlined" data-icon="group_work">group_work</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">Team Invites</span>
+<span class="text-[10px] text-on-surface-variant">Allow non-friends to invite</span>
+</div>
+<div class="ml-auto w-10 h-5 bg-primary rounded-full relative">
+<div class="absolute right-1 top-1 w-3 h-3 bg-on-primary rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-[#131313] border-t border-[#cbc3d5]/15 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto gap-6">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="text-lg font-bold text-[#e5e2e1] font-['Plus_Jakarta_Sans']">joga-together</span>
+<p class="text-[#cbc3d5]/60 text-xs font-['Plus_Jakarta_Sans']">© 2024 Joga Together. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-[#cbc3d5]/60 hover:text-[#cfbcff] text-xs font-['Plus_Jakarta_Sans'] transition-colors duration-300" href="#">Legal</a>
+<a class="text-[#cbc3d5]/60 hover:text-[#cfbcff] text-xs font-['Plus_Jakarta_Sans'] transition-colors duration-300" href="#">Privacy</a>
+<a class="text-[#cbc3d5]/60 hover:text-[#cfbcff] text-xs font-['Plus_Jakarta_Sans'] transition-colors duration-300" href="#">Careers</a>
+<a class="text-[#cbc3d5]/60 hover:text-[#cfbcff] text-xs font-['Plus_Jakarta_Sans'] transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary/40 cursor-pointer hover:text-primary transition-colors" data-icon="share">share</span>
+<span class="material-symbols-outlined text-primary/40 cursor-pointer hover:text-primary transition-colors" data-icon="help">help</span>
+</div>
+</div>
+</footer>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 glass-panel border-t border-outline-variant/10 flex justify-around items-center py-4 z-50">
+<a class="flex flex-col items-center gap-1 text-[#cbc3d5]" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#cbc3d5]" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Explore</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="person" data-weight="fill">person</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Profile</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#cbc3d5]" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Settings</span>
+</a>
+</nav>
+
+<script src="/js/main.js"></script>
+<script src="/js/pages/profile.js"></script>
+</body>
+</html>
