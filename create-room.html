@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Joga Together | Create Room</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="/js/tailwind.config.js"></script>
+<link rel="stylesheet" href="/css/style.css"/>
+<style>
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- TopNavBar Implementation -->
+<nav class="w-full top-0 sticky bg-[#0e0e0e] shadow-none z-50">
+<div class="flex justify-between items-center px-8 py-4 w-full">
+<div class="flex items-center gap-12">
+<span class="text-xl font-bold tracking-tighter text-[#e5e2e1]">joga-together</span>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#cbc3d5] hover:text-[#e5e2e1] font-['Plus_Jakarta_Sans'] tracking-tight" href="#">Home</a>
+<a class="text-[#cbc3d5] hover:text-[#e5e2e1] font-['Plus_Jakarta_Sans'] tracking-tight" href="#">Explore Rooms</a>
+<a class="text-[#cfbcff] font-semibold border-b-2 border-[#4A1FA1] pb-1 font-['Plus_Jakarta_Sans'] tracking-tight" href="#">Create Room</a>
+<a class="text-[#cbc3d5] hover:text-[#e5e2e1] font-['Plus_Jakarta_Sans'] tracking-tight" href="#">Schedule</a>
+<a class="text-[#cbc3d5] hover:text-[#e5e2e1] font-['Plus_Jakarta_Sans'] tracking-tight" href="#">Games</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex bg-surface-container-lowest px-4 py-2 rounded-full items-center gap-3 border border-outline-variant/15">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm text-on-surface placeholder:text-on-surface-variant/50 w-48" placeholder="Search tournaments..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-[#2a2a2a] transition-colors duration-300 p-2 rounded-full text-[#cfbcff]">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="hover:bg-[#2a2a2a] transition-colors duration-300 p-2 rounded-full text-[#cfbcff]">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="h-10 w-10 rounded-full overflow-hidden border border-primary/20">
+<img alt="User profile" data-alt="Portrait of a young gamer with purple ambient lighting on face, clean minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLXRAy_6la9FXnywAgt4gO8Tg1c_QkSizmXw4o4SPLF3A2GnbheCORGNnVs55IO3CDWlG8ubPOGlmqfgc5SWn8nqJAgIOh1HzzFG_r1Kwc_-BBu3uFA_SSU7f4Y8rL6ENJQoqfcKeiUDQTOpAfbKE7IQneuTQfwn-fiCfRJATYcVAec9cOs2aHVqvKxs16sgXxZo0tbgxXEDeOGM_ektiIpGryde4r3ehWZJf3L2nm_Ai6RBsoVB5kNi5lc88YSgkRAXWvbDK11_uR"/>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<!-- SideNavBar implementation (Hidden on mobile) -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#0e0e0e] shadow-[4px_0px_24px_rgba(0,0,0,0.5)] hidden lg:flex flex-col py-8 gap-2 z-40">
+<div class="px-6 mb-10 flex flex-col items-center text-center">
+<div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary-container to-primary p-0.5 mb-4">
+<div class="w-full h-full rounded-[calc(1rem-2px)] overflow-hidden bg-surface">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="Close up of a professional male gamer with stylish headphones, dramatic violet lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFL0OikeK6DRj5xOKn2zhFsmIMHryOLHzIZ2ujoWjUAWCszJRUfRVJIkaLihFeWko5Gl0xGHDoGUUduN3xNtV8-5eDXl9qNWwH-yGOjW-qeD7xgIf1sqzqbh_9rj0ZG-WzSet9T_Jvdb8pLp0fGO4I-aAbHUAxsfBxlKhUzATCj5nioOSvJw6R506WAa0YimRKWD0NFOFYsoQpmUcleURiougO_NX8dtx0FKPnlrV1SGJO6iTa5XD07g7I7VhyOjbWWcPdONaXJNLU"/>
+</div>
+</div>
+<h3 class="text-on-surface font-bold text-lg">Joga Player</h3>
+<p class="text-primary font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-[0.2em]">Elite Tier</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined">home</span> Home
+      </a>
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined">explore</span> Explore Rooms
+      </a>
+<a class="bg-gradient-to-r from-[#4a1fa1]/20 to-transparent text-[#cfbcff] border-l-4 border-[#4a1fa1] px-6 py-3 flex items-center gap-4 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined">add_circle</span> Create Room
+      </a>
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined">calendar_today</span> Schedule
+      </a>
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined">sports_esports</span> Games
+      </a>
+<div class="my-4 mx-6 border-t border-outline-variant/10"></div>
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined">notifications</span> Notifications
+      </a>
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined">person</span> Profile
+      </a>
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined">settings</span> Settings
+      </a>
+</nav>
+</aside>
+<main class="lg:ml-64 min-h-screen pt-4 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+<!-- Hero Header Area -->
+<header class="mb-12">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/10 border border-primary/20 mb-4">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest">Creation Suite</span>
+</div>
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface mb-2">Assemble Your Squad.</h1>
+<p class="text-on-surface-variant max-w-2xl font-light">Define your match parameters, select your arena, and find the perfect teammates for your next competitive venture.</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Multi-step Form Content -->
+<div class="lg:col-span-8 flex flex-col gap-12">
+<!-- Step 1: Select Game (Bento Grid Style) -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-on-primary font-bold text-sm">1</span>
+<h2 class="text-xl font-bold tracking-tight text-on-surface">Select Game</h2>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+<!-- Active Game Card -->
+<button class="relative group overflow-hidden rounded-xl bg-surface-container-high border-2 border-primary ring-4 ring-primary/10 transition-all duration-300 aspect-[4/5] text-left">
+<img alt="League of Legends" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="High-fantasy electronic sports cinematic screenshot with magical energy and dark landscape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUsHEU6lPvuXro5zhjDM0yMSOSI7oEm-m89lPZfp5Uo2KZGIqasH8UdggBt00DOWC6ncWXmEAR1QujJOVY2st-7mHFPhwktlDCm9XZ_yve3jWWPYCEyLn4sbb6wEqADJJxBArMBbzhvXuq9bOQzMPMLO5AA9F0ZelctqUoRQ-KZA5niQjb9QNRGrG56cWtiFYXxF6GLcjSr7qHcs0zJX91v4pNDVGf5NQ7Ljq2SQSLb-OkgNLlrOITu3V2dcIJAkVwM4lvgyMhjqh5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-1">MOBA</p>
+<p class="text-on-surface font-bold">League of Legends</p>
+</div>
+<div class="absolute top-4 right-4 bg-primary text-on-primary p-1 rounded-full">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+</button>
+<!-- Other Games -->
+<button class="relative group overflow-hidden rounded-xl bg-surface-container-high border border-outline-variant/10 transition-all duration-300 aspect-[4/5] text-left hover:border-primary/50">
+<img alt="Valorant" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-700" data-alt="Cyberpunk tactical shooter background with neon pink and blue lighting and futuristic weapons" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1uFRL4BtHBumw9KCLcdI_i1OI6Yu89PQdvt4-wScBhIhWzb7D149k0pXpeExf0DanZnz2F3Hco9NvzEgJOhTuc1wafLjGsmm_QXrI-ec1078AVS1JNTxFbUkh3gbMsecb3gJhdIkj5T8xEQZPAPBTh2zCyavfPCusJoLzTOarwFJGV2wC7YpQuqGAJPD6mqEVoTBk_Gf78qKWx03NCIEIYHQzEdjirbWQ0E_YkTHXIWpVUaSulzUlySQ7vCnQvwOncpgTrMfHM378"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-widest mb-1">FPS</p>
+<p class="text-on-surface font-bold">Valorant</p>
+</div>
+</button>
+<button class="relative group overflow-hidden rounded-xl bg-surface-container-high border border-outline-variant/10 transition-all duration-300 aspect-[4/5] text-left hover:border-primary/50">
+<img alt="CS2" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-700" data-alt="Abstract gritty smoke and fire textures in warm tones, competitive tactical atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGK01Ee90ZjDevfqPH-0Z4vjJyrWOTbADOjtU6uqg43HzSkN6fgoAh-qqHPdc6W_bs2rFwrPATs-J7fcU3WW8UAOcyPDtElQN2-aCrzpXr9o-b4JC1qDFyTA93Hx0qqA_BwPfXkWbSt9g5oJk4G7s6fg9wYtUMycv9545L-Kl3qvwQUnYO-dxaaWawou6Wt0lM98-040rvFqpfT94tXxYtDAheqBovTRAE7vXixaN2tXYLi2C3G5sFHV5TDHFIgdzv_iXTo1--BWRY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-widest mb-1">Tactical</p>
+<p class="text-on-surface font-bold">Counter-Strike 2</p>
+</div>
+</button>
+</div>
+</section>
+<!-- Step 2: Configuration -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant/20 text-on-surface-variant font-bold text-sm">2</span>
+<h2 class="text-xl font-bold tracking-tight text-on-surface">Configuration</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest ml-1">Region</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-lg py-3 px-4 text-on-surface appearance-none focus:ring-1 focus:ring-primary focus:border-primary outline-none">
+<option>North America (East)</option>
+<option>Europe (West)</option>
+<option>Asia (Pacific)</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest ml-1">Game Mode</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-lg py-3 px-4 text-on-surface appearance-none focus:ring-1 focus:ring-primary focus:border-primary outline-none">
+<option>Ranked Competitive</option>
+<option>Casual Unrated</option>
+<option>Scrimmage / Practice</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest ml-1">Platform</label>
+<div class="flex gap-3">
+<button class="flex-1 py-3 px-4 rounded-lg bg-primary-container/10 border border-primary text-primary font-bold text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">desktop_windows</span> PC
+                </button>
+<button class="flex-1 py-3 px-4 rounded-lg bg-surface-container-lowest border border-outline-variant/20 text-on-surface-variant font-bold text-sm flex items-center justify-center gap-2 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-lg">sports_esports</span> Console
+                </button>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest ml-1">Minimum Rank</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-lg py-3 px-4 text-on-surface appearance-none focus:ring-1 focus:ring-primary focus:border-primary outline-none">
+<option>Diamond I+</option>
+<option>Platinum III+</option>
+<option>Gold II+</option>
+<option>Any Rank</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Step 3: Squad Size -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant/20 text-on-surface-variant font-bold text-sm">3</span>
+<h2 class="text-xl font-bold tracking-tight text-on-surface">Squad Capacity</h2>
+</div>
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/5">
+<div class="flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="flex-1 w-full text-center md:text-left">
+<p class="text-on-surface font-bold text-lg mb-1">Current Party</p>
+<p class="text-on-surface-variant text-sm mb-6">How many players are already with you?</p>
+<div class="inline-flex items-center bg-surface-container-lowest border border-outline-variant/20 rounded-xl p-2 gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high text-on-surface"><span class="material-symbols-outlined">remove</span></button>
+<span class="text-2xl font-bold w-8 text-center">02</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high text-on-surface"><span class="material-symbols-outlined">add</span></button>
+</div>
+</div>
+<div class="hidden md:block w-[1px] h-24 bg-outline-variant/10"></div>
+<div class="flex-1 w-full text-center md:text-left">
+<p class="text-on-surface font-bold text-lg mb-1">Target Size</p>
+<p class="text-on-surface-variant text-sm mb-6">Total squad members needed for the game?</p>
+<div class="inline-flex items-center bg-surface-container-lowest border border-outline-variant/20 rounded-xl p-2 gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high text-on-surface"><span class="material-symbols-outlined">remove</span></button>
+<span class="text-2xl font-bold w-8 text-center text-primary">05</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high text-on-surface"><span class="material-symbols-outlined">add</span></button>
+</div>
+</div>
+</div>
+<!-- Progress visualization -->
+<div class="mt-10 flex gap-2">
+<div class="h-2 flex-1 rounded-full bg-primary shadow-[0_0_8px_rgba(207,188,255,0.4)]"></div>
+<div class="h-2 flex-1 rounded-full bg-primary shadow-[0_0_8px_rgba(207,188,255,0.4)]"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-container-highest"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-container-highest"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-container-highest"></div>
+</div>
+<p class="text-center text-[10px] uppercase tracking-widest text-on-surface-variant mt-4 font-bold">Seeking 3 more players</p>
+</div>
+</section>
+<!-- Step 4: Schedule -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant/20 text-on-surface-variant font-bold text-sm">4</span>
+<h2 class="text-xl font-bold tracking-tight text-on-surface">Schedule</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<button class="p-6 rounded-2xl bg-primary-container/10 border-2 border-primary text-left transition-all group">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+<div class="w-4 h-4 rounded-full border-4 border-primary bg-primary"></div>
+</div>
+<h3 class="text-on-surface font-bold text-lg">Play Now</h3>
+<p class="text-on-surface-variant text-sm mt-1">Room goes live immediately after creation.</p>
+</button>
+<button class="p-6 rounded-2xl bg-surface-container-low border border-outline-variant/10 text-left transition-all hover:border-outline-variant/40 group">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl group-hover:text-primary transition-colors">calendar_month</span>
+<div class="w-4 h-4 rounded-full border border-outline-variant"></div>
+</div>
+<h3 class="text-on-surface font-bold text-lg">Set Date/Time</h3>
+<p class="text-on-surface-variant text-sm mt-1">Schedule your session for a future window.</p>
+</button>
+</div>
+</section>
+</div>
+<!-- Room Summary Sidebar -->
+<aside class="lg:col-span-4 sticky top-24">
+<div class="bg-surface-container-high rounded-2xl overflow-hidden shadow-2xl">
+<div class="h-32 relative">
+<img alt="Room header" class="w-full h-full object-cover opacity-50" data-alt="League of Legends character splash art with dramatic dark background and blue neon accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPvfqFQUBOx0mJuUskLoFrt2s70GcYa2EcmVzrxQas2iPPNfPahrNJUOkyUjixixHjH8jXjaUpyx5Fj8deYV0tBZ2F77Z0GQcjT6CkBVdRjZEX5htiF4UIcLfqaEZLJIKHQzQEEW5zNuCTT5UKLShDuqVmwx3PtONjUwIiaeKO3NjTOSfxoVEC4T0Ovwe9qhO1iJ1Z3F3L2mCkcD5SOXQ5V1yKQ7zR0BEdnVoeVe5nSbWewFfTGNT03LN19JeQijlHG5QLFKhbEAn4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<h3 class="text-xl font-extrabold tracking-tight text-on-surface">Room Summary</h3>
+</div>
+</div>
+<div class="p-6 space-y-6">
+<div class="flex justify-between items-end border-b border-outline-variant/10 pb-4">
+<div>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-1">Game</p>
+<p class="text-on-surface font-medium">League of Legends</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-1">Mode</p>
+<p class="text-on-surface font-medium">Ranked</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6 pb-4 border-b border-outline-variant/10">
+<div>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-1">Region</p>
+<p class="text-on-surface font-medium">NA-East</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-1">Platform</p>
+<p class="text-on-surface font-medium">PC</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-1">Rank</p>
+<p class="text-primary font-bold">Diamond I+</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-1">Schedule</p>
+<div class="flex items-center gap-1 text-primary font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                  LIVE NOW
+                </div>
+</div>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest rounded-xl p-4">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-high bg-surface-container-highest overflow-hidden">
+<img alt="Player 1" data-alt="Gamer avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOSKOhiEKRPUhAWjnMFyZ_Ww8X2i_Nny-TIWIME6LkQiHqa5pAzA6EViiwrnSVgm7Tv5TZyk-iKVNoafANLjQEi1UCrr3E9t77HDU331BV545jmihTagdKRFt83H1XxkvwciGZFCTuM33LuAUu_9qmTZUBZIwkUDlazqQgvAdFnkp6YCgD8ndXFNQwiuVk-Fkj01jkproS9J9qq8V4BxxES7wHbifscBZ4-yEhFHIkvGO-vHCo1aWziGa2j22DL3VW_QnfB8pSYfAQ"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-high bg-surface-container-highest overflow-hidden">
+<img alt="Player 2" data-alt="Female gamer profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM5-SE-pVy5owlvlWkks4-09vk6sj9MvU_mCWFZnmKC46jh9v85OQri_v_6cXzdrqN_lfyqFRr3Z3hgagIY09fBhKpneQtyy_zbjV_9PV2tUgzchLv69Axhoks5LD0KCJ8-vAipFT0t1lylDY4h5gJ7thF-yOyvLEUFhTs7xajpl-OR5F98irdK4bTN9Baq17ZEH5OEy-ji0f9RIcH0CS8QdkSO8u1ci0gopJz6kcGX10DHA3F3vtlUi2lYVYUKAI3WeCPzRHqr6va"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-high bg-surface-container-highest flex items-center justify-center">
+<span class="text-[10px] font-bold text-on-surface-variant">+3</span>
+</div>
+</div>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">5 Slot Capacity</p>
+</div>
+<button class="w-full py-4 rounded-xl bg-gradient-to-br from-[#4a1fa1] to-[#cfbcff] text-[#131313] font-extrabold text-sm uppercase tracking-widest shadow-[0_0_24px_rgba(74,31,161,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-150">
+              Launch Room
+            </button>
+<p class="text-center text-[10px] text-on-surface-variant/60">By launching, you agree to our Fair Play competitive standards.</p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<footer class="w-full py-12 px-8 border-t border-[#cbc3d5]/15 bg-[#131313] mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto gap-8">
+<div>
+<span class="text-lg font-bold text-[#e5e2e1]">joga-together</span>
+<p class="text-[#cbc3d5]/60 font-['Plus_Jakarta_Sans'] text-xs mt-2">© 2024 Joga Together. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-[#cbc3d5]/60 hover:text-[#cfbcff] font-['Plus_Jakarta_Sans'] text-xs transition-colors duration-300" href="#">Legal</a>
+<a class="text-[#cbc3d5]/60 hover:text-[#cfbcff] font-['Plus_Jakarta_Sans'] text-xs transition-colors duration-300" href="#">Privacy</a>
+<a class="text-[#cbc3d5]/60 hover:text-[#cfbcff] font-['Plus_Jakarta_Sans'] text-xs transition-colors duration-300" href="#">Careers</a>
+<a class="text-[#cbc3d5]/60 hover:text-[#cfbcff] font-['Plus_Jakarta_Sans'] text-xs transition-colors duration-300" href="#">Contact</a>
+</div>
+</div>
+</footer>
+
+<script src="/js/main.js"></script>
+<script src="/js/pages/create-room.js"></script>
+</body>
+</html>
