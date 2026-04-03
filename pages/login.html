@@ -4,6 +4,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Joga Together | Login</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -51,8 +53,8 @@
 </div>
 <div class="w-full max-w-md mx-auto">
 <div class="flex gap-8 mb-10 border-b border-outline-variant/10">
-<button class="pb-4 text-sm font-bold uppercase tracking-widest text-primary border-b-2 border-primary-container transition-all">Sign In</button>
-<button class="pb-4 text-sm font-bold uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-all">Sign Up</button>
+<button id="tab-signin" class="pb-4 text-sm font-bold uppercase tracking-widest text-primary border-b-2 border-primary-container transition-all">Sign In</button>
+<button id="tab-signup" class="pb-4 text-sm font-bold uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-all">Sign Up</button>
 </div>
 <div class="space-y-6">
 <div class="grid grid-cols-2 gap-4">
@@ -70,19 +72,20 @@
 <span class="flex-shrink mx-4 text-xs uppercase tracking-widest text-on-surface-variant/60 font-bold">Or continue with email</span>
 <div class="flex-grow border-t border-outline-variant/10"></div>
 </div>
-<form class="space-y-4">
+<form id="auth-form" class="space-y-4">
 <div class="space-y-2">
 <label class="text-xs uppercase tracking-widest text-on-surface-variant font-bold ml-1">Email Address</label>
-<input class="w-full bg-surface-container-lowest border-none ring-1 ring-outline-variant/20 focus:ring-2 focus:ring-primary-container rounded-lg py-4 px-5 text-on-surface placeholder:text-on-surface-variant/30 transition-all outline-none" placeholder="commander@joga.gg" type="email"/>
+<input id="input-email" class="w-full bg-surface-container-lowest border-none ring-1 ring-outline-variant/20 focus:ring-2 focus:ring-primary-container rounded-lg py-4 px-5 text-on-surface placeholder:text-on-surface-variant/30 transition-all outline-none" placeholder="commander@joga.gg" type="email"/>
 </div>
 <div class="space-y-2">
 <div class="flex justify-between items-center px-1">
 <label class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Password</label>
 <a class="text-xs font-semibold text-primary-fixed-dim hover:text-primary transition-colors" href="#">Forgot?</a>
 </div>
-<input class="w-full bg-surface-container-lowest border-none ring-1 ring-outline-variant/20 focus:ring-2 focus:ring-primary-container rounded-lg py-4 px-5 text-on-surface placeholder:text-on-surface-variant/30 transition-all outline-none" placeholder="••••••••" type="password"/>
+<input id="input-password" class="w-full bg-surface-container-lowest border-none ring-1 ring-outline-variant/20 focus:ring-2 focus:ring-primary-container rounded-lg py-4 px-5 text-on-surface placeholder:text-on-surface-variant/30 transition-all outline-none" placeholder="••••••••" type="password"/>
 </div>
-<button class="w-full py-4 bg-primary-container hover:bg-inverse-primary text-on-primary-container font-bold rounded-lg shadow-lg shadow-primary-container/20 transition-all active:scale-[0.98] mt-4 flex items-center justify-center gap-2 group" type="submit">
+<div id="extra-fields" class="space-y-4"></div>
+<button id="btn-submit" class="w-full py-4 bg-primary-container hover:bg-inverse-primary text-on-primary-container font-bold rounded-lg shadow-lg shadow-primary-container/20 transition-all active:scale-[0.98] mt-4 flex items-center justify-center gap-2 group" type="submit">
 <span>Enter Arena</span>
 <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
 </button>
@@ -101,6 +104,7 @@ By entering the arena, you agree to our <br/>
 <div class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] rounded-full bg-secondary-container/5 blur-[100px]"></div>
 </div>
 <script src="/js/main.js"></script>
+<script src="/js/api.js"></script>
 <script src="/js/pages/login.js"></script>
 </body>
 </html>

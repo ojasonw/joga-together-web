@@ -4,6 +4,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Joga Together | Game Discovery</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -31,7 +33,7 @@
 <span class="material-symbols-outlined" data-icon="home">home</span>
 <span class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest">Home</span>
 </a>
-<a class="bg-gradient-to-r from-[#4a1fa1]/20 to-transparent text-[#cfbcff] border-l-4 border-[#4a1fa1] px-6 py-3 transition-all duration-200 flex items-center gap-4" href="/browse-rooms">
+<a class="text-[#cbc3d5] px-6 py-3 hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="/browse-rooms">
 <span class="material-symbols-outlined" data-icon="explore">explore</span>
 <span class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest">Explore Rooms</span>
 </a>
@@ -43,8 +45,8 @@
 <span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
 <span class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest">Schedule</span>
 </a>
-<a class="text-[#cbc3d5] px-6 py-3 hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="/game-discovery">
-<span class="material-symbols-outlined" data-icon="sports_esports">sports_esports</span>
+<a class="bg-gradient-to-r from-[#4a1fa1]/20 to-transparent text-[#cfbcff] border-l-4 border-[#4a1fa1] px-6 py-3 transition-all duration-200 flex items-center gap-4" href="/game-discovery">
+<span class="material-symbols-outlined" data-icon="sports_esports" style="font-variation-settings: 'FILL' 1;">sports_esports</span>
 <span class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest">Games</span>
 </a>
 <div class="mt-auto flex flex-col gap-1">
@@ -70,10 +72,10 @@
 <span class="text-xl font-bold tracking-tighter text-[#e5e2e1] font-['Plus_Jakarta_Sans']">joga-together</span>
 <nav class="hidden lg:flex gap-6">
 <a class="text-[#cbc3d5] hover:text-[#e5e2e1] transition-colors duration-300 font-['Plus_Jakarta_Sans'] tracking-tight" href="/">Home</a>
-<a class="text-[#cfbcff] font-semibold border-b-2 border-[#4A1FA1] pb-1 font-['Plus_Jakarta_Sans'] tracking-tight" href="/browse-rooms">Explore Rooms</a>
+<a class="text-[#cbc3d5] hover:text-[#e5e2e1] transition-colors duration-300 font-['Plus_Jakarta_Sans'] tracking-tight" href="/browse-rooms">Explore Rooms</a>
 <a class="text-[#cbc3d5] hover:text-[#e5e2e1] transition-colors duration-300 font-['Plus_Jakarta_Sans'] tracking-tight" href="/create-room">Create Room</a>
 <a class="text-[#cbc3d5] hover:text-[#e5e2e1] transition-colors duration-300 font-['Plus_Jakarta_Sans'] tracking-tight" href="/schedule">Schedule</a>
-<a class="text-[#cbc3d5] hover:text-[#e5e2e1] transition-colors duration-300 font-['Plus_Jakarta_Sans'] tracking-tight" href="/game-discovery">Games</a>
+<a class="text-[#cfbcff] font-semibold border-b-2 border-[#4A1FA1] pb-1 font-['Plus_Jakarta_Sans'] tracking-tight" href="/game-discovery">Games</a>
 </nav>
 </div>
 <div class="flex items-center gap-4">
@@ -244,7 +246,7 @@
 <th class="px-8 py-6 text-right text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Action</th>
 </tr>
 </thead>
-<tbody class="divide-y divide-outline-variant/5">
+<tbody id="games-catalog-body" class="divide-y divide-outline-variant/5">
 <!-- Item 1 -->
 <tr class="hover:bg-surface-container-high/50 transition-colors group">
 <td class="px-8 py-6">
@@ -336,16 +338,16 @@
 <span class="material-symbols-outlined" data-icon="home">home</span>
 <span class="text-[8px] uppercase font-bold tracking-widest">Home</span>
 </button>
-<button class="flex flex-col items-center gap-1 text-[#cfbcff]">
-<span class="material-symbols-outlined" data-icon="explore" style="font-variation-settings: 'FILL' 1;">explore</span>
+<button class="flex flex-col items-center gap-1 text-[#cbc3d5]">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
 <span class="text-[8px] uppercase font-bold tracking-widest">Explore</span>
 </button>
 <button class="flex flex-col items-center gap-1 text-[#cbc3d5]">
 <span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
 <span class="text-[8px] uppercase font-bold tracking-widest">Create</span>
 </button>
-<button class="flex flex-col items-center gap-1 text-[#cbc3d5]">
-<span class="material-symbols-outlined" data-icon="sports_esports">sports_esports</span>
+<button class="flex flex-col items-center gap-1 text-[#cfbcff]">
+<span class="material-symbols-outlined" data-icon="sports_esports" style="font-variation-settings: 'FILL' 1;">sports_esports</span>
 <span class="text-[8px] uppercase font-bold tracking-widest">Games</span>
 </button>
 <button class="flex flex-col items-center gap-1 text-[#cbc3d5]">
@@ -354,6 +356,7 @@
 </button>
 </nav>
 <script src="/js/main.js"></script>
+<script src="/js/api.js"></script>
 <script src="/js/pages/game-discovery.js"></script>
 </body>
 </html>

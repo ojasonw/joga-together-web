@@ -4,6 +4,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Joga Together | Create Room</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -313,7 +315,19 @@
 </div>
 <p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">5 Slot Capacity</p>
 </div>
-<button class="w-full py-4 rounded-xl bg-gradient-to-br from-[#4a1fa1] to-[#cfbcff] text-[#131313] font-extrabold text-sm uppercase tracking-widest shadow-[0_0_24px_rgba(74,31,161,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-150">
+<div class="space-y-3 mb-4">
+  <div class="space-y-1">
+    <label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Room Name</label>
+    <input id="input-room-name" type="text" placeholder="Ex: Diamond Ranked — NA East"
+      class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-lg py-3 px-4 text-on-surface text-sm focus:ring-1 focus:ring-primary outline-none"/>
+  </div>
+  <div class="space-y-1">
+    <label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Description</label>
+    <input id="input-room-description" type="text" placeholder="Looking for Diamond+ players..."
+      class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-lg py-3 px-4 text-on-surface text-sm focus:ring-1 focus:ring-primary outline-none"/>
+  </div>
+</div>
+<button id="btn-launch-room" class="w-full py-4 rounded-xl bg-gradient-to-br from-[#4a1fa1] to-[#cfbcff] text-[#131313] font-extrabold text-sm uppercase tracking-widest shadow-[0_0_24px_rgba(74,31,161,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-150">
               Launch Room
             </button>
 <p class="text-center text-[10px] text-on-surface-variant/60">By launching, you agree to our Fair Play competitive standards.</p>
@@ -338,6 +352,7 @@
 </footer>
 
 <script src="/js/main.js"></script>
+<script src="/js/api.js"></script>
 <script src="/js/pages/create-room.js"></script>
 </body>
 </html>
