@@ -1,6 +1,6 @@
 // ─── Configuration ────────────────────────────────────────────────────────────
 // Override window.API_BASE_URL before this script loads for different envs.
-const API_BASE_URL = window.API_BASE_URL || 'http://localhost:8081';
+const API_BASE_URL = window.API_BASE_URL || 'http://localhost:8090';
 
 // ─── Auth helpers ─────────────────────────────────────────────────────────────
 const Auth = {
@@ -28,7 +28,7 @@ const Auth = {
   logout() {
     localStorage.removeItem('jt_token');
     localStorage.removeItem('jt_user');
-    window.location.href = '/login';
+    window.location.href = 'login.html';
   },
 };
 
@@ -61,9 +61,19 @@ async function apiFetch(path, options = {}) {
 // ─── Auth guard ───────────────────────────────────────────────────────────────
 function requireAuth() {
   if (!Auth.isAuthenticated()) {
-    window.location.href = '/login';
+    window.location.href = 'login.html';
   }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const logoutButton = document.getElementById('btn-logout');
+  if (!logoutButton) return;
+
+  logoutButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    Auth.logout();
+  });
+});
 
 // ─── UI helpers ───────────────────────────────────────────────────────────────
 function showToast(message, type = 'info') {

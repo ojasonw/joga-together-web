@@ -93,7 +93,7 @@ Trailing slashes e extensões `.html` são redirecionados automaticamente (301).
 
 ## Integrações com o Backend
 
-O cliente HTTP em `js/api.js` usa `window.API_BASE_URL` (padrão: `http://localhost:8081`).  
+O cliente HTTP em `js/api.js` usa `window.API_BASE_URL` (padrão: `http://localhost:8090`).  
 O token JWT é armazenado em `localStorage` (`jt_token`).
 
 | Endpoint                        | Página           | Status       |

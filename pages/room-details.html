@@ -9,8 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script src="/js/tailwind.config.js"></script>
-<link rel="stylesheet" href="/css/style.css"/>
+<script src="../js/tailwind.config.js"></script>
+<link rel="stylesheet" href="../css/style.css"/>
 <style>
     .glass-effect { backdrop-filter: blur(20px); background: rgba(58, 57, 57, 0.2); }
     .pulse-glow { box-shadow: 0 0 15px rgba(207, 188, 255, 0.3); }
@@ -32,26 +32,26 @@
 </div>
 </div>
 <nav class="flex flex-col gap-1">
-<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="/">
+<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="../">
 <span class="material-symbols-outlined">home</span> Home
       </a>
-<a class="bg-gradient-to-r from-[#4a1fa1]/20 to-transparent text-[#cfbcff] border-l-4 border-[#4a1fa1] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest transition-all duration-200 flex items-center gap-4" href="/browse-rooms">
+<a class="bg-gradient-to-r from-[#4a1fa1]/20 to-transparent text-[#cfbcff] border-l-4 border-[#4a1fa1] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest transition-all duration-200 flex items-center gap-4" href="browse-rooms.html">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span> Explore Rooms
       </a>
-<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="/create-room">
+<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="create-room.html">
 <span class="material-symbols-outlined">add_circle</span> Create Room
       </a>
-<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="/schedule">
+<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="schedule.html">
 <span class="material-symbols-outlined">calendar_today</span> Schedule
       </a>
-<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="/game-discovery">
+<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="game-discovery.html">
 <span class="material-symbols-outlined">sports_esports</span> Games
       </a>
 <div class="my-4 mx-6 border-t border-outline-variant opacity-15"></div>
-<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="/notifications">
+<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="notifications.html">
 <span class="material-symbols-outlined">notifications</span> Notifications
       </a>
-<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="/profile">
+<a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="profile.html">
 <span class="material-symbols-outlined">person</span> Profile
       </a>
 <a class="text-[#cbc3d5] px-6 py-3 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest hover:bg-[#2a2a2a] transition-all duration-200 flex items-center gap-4" href="#">
@@ -292,7 +292,7 @@
 </main>
 <!-- Mobile Navigation Shell -->
 <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#0e0e0e] shadow-[0px_-4px_24px_rgba(0,0,0,0.5)] flex justify-around items-center py-4">
-<a class="flex flex-col items-center gap-1 text-[#cbc3d5]" href="/">
+<a class="flex flex-col items-center gap-1 text-[#cbc3d5]" href="../">
 <span class="material-symbols-outlined">home</span>
 <span class="text-[8px] uppercase tracking-tighter">Home</span>
 </a>
@@ -303,17 +303,18 @@
 <div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center -mt-8 border-4 border-[#0e0e0e] shadow-lg">
 <span class="material-symbols-outlined text-on-primary-container">add</span>
 </div>
-<a class="flex flex-col items-center gap-1 text-[#cbc3d5]" href="/game-discovery">
+<a class="flex flex-col items-center gap-1 text-[#cbc3d5]" href="game-discovery.html">
 <span class="material-symbols-outlined">sports_esports</span>
 <span class="text-[8px] uppercase tracking-tighter">Games</span>
 </a>
-<a class="flex flex-col items-center gap-1 text-[#cbc3d5]" href="/profile">
+<a class="flex flex-col items-center gap-1 text-[#cbc3d5]" href="profile.html">
 <span class="material-symbols-outlined">person</span>
 <span class="text-[8px] uppercase tracking-tighter">Profile</span>
 </a>
 </nav>
-<script src="/js/main.js"></script>
-<script src="/js/api.js"></script>
-<script src="/js/pages/room-details.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/pages/room-details.js"></script>
 </body>
 </html>
+

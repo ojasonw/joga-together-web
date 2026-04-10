@@ -75,7 +75,7 @@ joga-together-web/
 ## Integrações com o Backend (Estado Atual)
 
 Backend: `my-java-app` — Spring Boot 3.5.10, JWT, PostgreSQL  
-Base URL configurável em `js/api.js` via `window.API_BASE_URL` (padrão: `http://localhost:8081`)
+Base URL configurável em `js/api.js` via `window.API_BASE_URL` (padrão: `http://localhost:8090`)
 
 | Endpoint Backend           | Página             | Status       |
 |----------------------------|--------------------|--------------|

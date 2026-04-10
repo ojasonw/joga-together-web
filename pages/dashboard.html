@@ -9,8 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script src="/js/tailwind.config.js"></script>
-<link rel="stylesheet" href="/css/style.css"/>
+<script src="../js/tailwind.config.js"></script>
+<link rel="stylesheet" href="../css/style.css"/>
 <style>
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: #0e0e0e; }
@@ -32,35 +32,37 @@
 </div>
 </div>
 <nav class="flex flex-col gap-1">
-<a class="bg-gradient-to-r from-[#4a1fa1]/20 to-transparent text-[#cfbcff] border-l-4 border-[#4a1fa1] px-6 py-3 flex items-center gap-4 transition-all duration-200" href="/">
+<a class="bg-gradient-to-r from-[#4a1fa1]/20 to-transparent text-[#cfbcff] border-l-4 border-[#4a1fa1] px-6 py-3 flex items-center gap-4 transition-all duration-200" href="../">
 <span class="material-symbols-outlined text-lg">home</span>
 <span class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">Home</span>
 </a>
-<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="/browse-rooms">
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="browse-rooms.html">
 <span class="material-symbols-outlined text-lg">explore</span>
 <span class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">Explore Rooms</span>
 </a>
-<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="/create-room">
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="create-room.html">
 <span class="material-symbols-outlined text-lg">add_circle</span>
 <span class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">Create Room</span>
 </a>
-<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="/schedule">
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="schedule.html">
 <span class="material-symbols-outlined text-lg">calendar_today</span>
 <span class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">Schedule</span>
 </a>
-<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="/game-discovery">
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="game-discovery.html">
 <span class="material-symbols-outlined text-lg">sports_esports</span>
 <span class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">Games</span>
 </a>
-<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="/notifications">
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="notifications.html">
 <span class="material-symbols-outlined text-lg">notifications</span>
 <span class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">Notifications</span>
 </a>
-<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="/profile">
+<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="profile.html">
 <span class="material-symbols-outlined text-lg">person</span>
 <span class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">Profile</span>
-</a>
-<a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="#">
+</a><a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="#" id="btn-logout">
+<span class="material-symbols-outlined text-lg">logout</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">Logout</span>
+</a><a class="text-[#cbc3d5] px-6 py-3 flex items-center gap-4 hover:bg-[#2a2a2a] transition-all duration-200" href="#">
 <span class="material-symbols-outlined text-lg">settings</span>
 <span class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">Settings</span>
 </a>
@@ -283,8 +285,9 @@
             Quick Create Room
         </div>
 </button>
-<script src="/js/main.js"></script>
-<script src="/js/api.js"></script>
-<script src="/js/pages/dashboard.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/pages/dashboard.js"></script>
 </body>
 </html>
+

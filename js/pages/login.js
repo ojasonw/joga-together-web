@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Already logged in → go to dashboard
   if (Auth.isAuthenticated()) {
-    window.location.href = '/dashboard';
+    window.location.href = 'dashboard.html';
     return;
   }
 
@@ -31,13 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
     tabSignUp.classList.toggle('text-on-surface-variant', isSignin);
 
     emailInput.closest('.space-y-2').classList.remove('hidden');
-    passInput.closest('.space-y-2').parentElement.classList.remove('hidden');
+    passInput.closest('.space-y-2').classList.remove('hidden');
     extraFields.innerHTML = '';
 
     if (isSignin) {
-      submitBtn.textContent = 'Enter Arena';
+      submitBtn.innerHTML = 'Enter Arena <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>';
     } else {
-      submitBtn.textContent = 'Create Account';
+      submitBtn.innerHTML = 'Create Account <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>';
       renderSignUpFields();
     }
   }
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderConfirmStep() {
     mode = 'confirm';
     emailInput.closest('.space-y-2').classList.add('hidden');
-    passInput.closest('.space-y-2').parentElement.classList.add('hidden');
+    passInput.closest('.space-y-2').classList.add('hidden');
     extraFields.innerHTML = `
       <p class="text-on-surface-variant text-sm text-center leading-relaxed">
         Código de verificação enviado ao seu email.<br/>
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
           placeholder="000000" type="text" maxlength="6" inputmode="numeric" required/>
       </div>
     `;
-    submitBtn.textContent = 'Confirm Account';
+    submitBtn.innerHTML = 'Confirm Account <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>';
   }
 
   tabSignIn.addEventListener('click', () => setTab('signin'));
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!res.ok) {
       showToast('Credenciais inválidas. Tente novamente.', 'error');
-      submitBtn.textContent = 'Enter Arena';
+      submitBtn.innerHTML = 'Enter Arena <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>';
       return;
     }
 
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Auth.setUser({ email: emailInput.value.trim(), sub: claims?.sub });
 
     showToast('Login realizado!', 'success');
-    window.location.href = '/dashboard';
+    window.location.href = 'dashboard.html';
   }
 
   // ─── Sign Up ────────────────────────────────────────────────────────────────
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
       showToast(err.message || 'Erro ao criar conta. Verifique os dados.', 'error');
-      submitBtn.textContent = 'Create Account';
+      submitBtn.innerHTML = 'Create Account <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>';
       return;
     }
 
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!res.ok) {
       showToast('Código inválido ou expirado.', 'error');
-      submitBtn.textContent = 'Confirm Account';
+      submitBtn.innerHTML = 'Confirm Account <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>';
       return;
     }
 
