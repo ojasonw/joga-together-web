@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tabSignUp.classList.toggle('text-on-surface-variant', isSignin);
 
     emailInput.closest('.space-y-2').classList.remove('hidden');
-    passInput.closest('.space-y-2').parentElement.classList.remove('hidden');
+    passInput.closest('.space-y-2').classList.remove('hidden');
     extraFields.innerHTML = '';
 
     if (isSignin) {
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderConfirmStep() {
     mode = 'confirm';
     emailInput.closest('.space-y-2').classList.add('hidden');
-    passInput.closest('.space-y-2').parentElement.classList.add('hidden');
+    passInput.closest('.space-y-2').classList.add('hidden');
     extraFields.innerHTML = `
       <p class="text-on-surface-variant text-sm text-center leading-relaxed">
         Código de verificação enviado ao seu email.<br/>
