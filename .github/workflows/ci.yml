@@ -54,10 +54,15 @@ jobs:
           repository: ojasonw/homelab-gitops
           token: ${{ secrets.GITOPS_PAT }}
 
+      - name: "Instala o yq"
+        run: |
+          sudo wget -O /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+          sudo chmod +x /usr/local/bin/yq
+
       - name: "Atualiza a tag da imagem no kustomization.yaml"
         run: |
-          cd infra/joga-together-web/base
-          sed -i "s/newTag: .*/newTag: ${{ env.IMAGE_VERSION }}/" kustomization.yaml
+          cd infra/joga-together/base
+          yq -i '(.images[] | select(.name == "ojasonw/joga-together-web") | .newTag) = strenv(IMAGE_VERSION)' kustomization.yaml
 
       - name: "Cria um Pull Request"
         uses: peter-evans/create-pull-request@v6
