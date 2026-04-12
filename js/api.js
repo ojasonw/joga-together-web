@@ -1,6 +1,6 @@
 // ─── Configuration ────────────────────────────────────────────────────────────
 // Override window.API_BASE_URL before this script loads for different envs.
-const API_BASE_URL = window.API_BASE_URL || 'http://localhost:8081';
+const API_BASE_URL = window.API_BASE_URL || '/api';
 
 // ─── Auth helpers ─────────────────────────────────────────────────────────────
 const Auth = {
