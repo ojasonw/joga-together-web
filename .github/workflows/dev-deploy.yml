@@ -41,8 +41,8 @@ jobs:
 
       - name: Commit e push direto
         run: |
-          git config user.email "ci@github.com"
-          git config user.name "GitHub Actions"
+          git config user.email "22104080+gfidlab-ci-user@users.noreply.github.com"
+          git config user.name "gfidlab-ci-user"
           echo "# last-deploy: $(date -u +%Y-%m-%dT%H:%M:%SZ) sha: ${GITHUB_SHA::7}" \
             > infra/joga-together/overlays/dev/.last-deploy
           git add infra/joga-together/overlays/dev/.last-deploy
