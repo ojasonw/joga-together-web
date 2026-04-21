@@ -33,7 +33,7 @@
 </div>
 </div>
 <nav class="flex flex-col gap-1">
-<a class="flex items-center gap-4 text-[#cbc3d5] px-6 py-3 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="/">
+<a class="flex items-center gap-4 text-[#cbc3d5] px-6 py-3 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="/dashboard">
 <span class="material-symbols-outlined" data-icon="home">home</span> Home
             </a>
 <a class="flex items-center gap-4 text-[#cbc3d5] px-6 py-3 hover:bg-[#2a2a2a] transition-all duration-200 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="/browse-rooms">
@@ -67,7 +67,7 @@
 <div class="flex items-center gap-8">
 <h1 class="text-xl font-bold tracking-tighter text-[#e5e2e1] font-['Plus_Jakarta_Sans']">joga-together</h1>
 <nav class="hidden lg:flex gap-6">
-<a class="text-[#cbc3d5] hover:text-[#e5e2e1] transition-colors duration-300 font-['Plus_Jakarta_Sans'] tracking-tight" href="/">Home</a>
+<a class="text-[#cbc3d5] hover:text-[#e5e2e1] transition-colors duration-300 font-['Plus_Jakarta_Sans'] tracking-tight" href="/dashboard">Home</a>
 <a class="text-[#cbc3d5] hover:text-[#e5e2e1] transition-colors duration-300 font-['Plus_Jakarta_Sans'] tracking-tight" href="/browse-rooms">Explore Rooms</a>
 <a class="text-[#cbc3d5] hover:text-[#e5e2e1] transition-colors duration-300 font-['Plus_Jakarta_Sans'] tracking-tight" href="/create-room">Create Room</a>
 <a class="text-[#cbc3d5] hover:text-[#e5e2e1] transition-colors duration-300 font-['Plus_Jakarta_Sans'] tracking-tight" href="/schedule">Schedule</a>
@@ -324,7 +324,7 @@
 </main>
 <!-- BottomNavBar (Mobile) -->
 <nav class="md:hidden fixed bottom-0 left-0 right-0 glass-panel border-t border-outline-variant/10 flex justify-around items-center py-4 z-50">
-<a class="flex flex-col items-center gap-1 text-[#cbc3d5]" href="/">
+<a class="flex flex-col items-center gap-1 text-[#cbc3d5]" href="/dashboard">
 <span class="material-symbols-outlined" data-icon="home">home</span>
 <span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
 </a>
@@ -343,7 +343,7 @@
 </nav>
 
 <script src="/js/main.js"></script>
-<script>window.API_BASE_URL = "/api";</script>
+<script src="/js/config.js"></script>
 <script src="/js/api.js"></script>
 <script src="/js/pages/profile.js"></script>
 </body>

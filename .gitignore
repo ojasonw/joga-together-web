@@ -1,2 +1,4 @@
 .dockerignore
 docker-compose.yml
+.env
+js/config.js
