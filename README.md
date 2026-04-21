@@ -42,11 +42,12 @@ python3 -m http.server 8080
 
 ```
 joga-together-web/
-├── index.html              # Landing page (pública)
+├── index.html              # Redirect to dashboard
+├── landing.html            # Landing page (pública)
+├── dashboard.html          # Dashboard (página inicial autenticada)
 ├── 404.html                # Página de erro
 ├── pages/                  # Páginas da aplicação
 │   ├── login.html
-│   ├── dashboard.html
 │   ├── browse-rooms.html
 │   ├── create-room.html
 │   ├── game-discovery.html

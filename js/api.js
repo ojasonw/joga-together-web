@@ -28,7 +28,7 @@ const Auth = {
   logout() {
     localStorage.removeItem('jt_token');
     localStorage.removeItem('jt_user');
-    window.location.href = 'login.html';
+    window.location.href = '/pages/login.html';
   },
 };
 

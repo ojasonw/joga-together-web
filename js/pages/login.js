@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Decode JWT to extract available claims (sub = email by default in Spring)
     const claims = Auth.decodeToken();
-    Auth.setUser({ email: emailInput.value.trim(), sub: claims?.sub });
+    Auth.setUser({ username: data.username, email: emailInput.value.trim(), sub: claims?.sub });
 
     showToast('Login realizado!', 'success');
     window.location.href = 'dashboard.html';

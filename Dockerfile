@@ -7,7 +7,6 @@ RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copia páginas e assets
-COPY index.html 404.html /usr/share/nginx/html/
 COPY pages/ /usr/share/nginx/html/pages/
 COPY css/ /usr/share/nginx/html/css/
 COPY js/ /usr/share/nginx/html/js/

@@ -12,11 +12,13 @@ Aplicação web estática servida via **nginx**, construída com HTML puro, Tail
 joga-together-web/
 │
 ├── index.html                      # Landing page (pública)
+├── index.html                     # Redirect to dashboard
+├── landing.html                   # Landing page (pública)
+├── dashboard.html                 # Dashboard (home pós-login)
 ├── 404.html                        # Página de erro
 │
 ├── pages/                          # Páginas internas da aplicação
 │   ├── login.html                  # Autenticação (sign in / sign up / confirm)
-│   ├── dashboard.html              # Home pós-login
 │   ├── browse-rooms.html           # Explorar salas disponíveis
 │   ├── create-room.html            # Criar nova sala (grupo)
 │   ├── game-discovery.html         # Catálogo de jogos
@@ -56,9 +58,9 @@ joga-together-web/
 
 | Requisição          | Serve                          |
 |---------------------|-------------------------------|
-| `/`                 | `index.html`                  |
+| `/`                 | `index.html` (redirect to dashboard) |
+| `/dashboard`        | `dashboard.html`              |
 | `/login`            | `pages/login.html`            |
-| `/dashboard`        | `pages/dashboard.html`        |
 | `/browse-rooms`     | `pages/browse-rooms.html`     |
 | `/create-room`      | `pages/create-room.html`      |
 | `/game-discovery`   | `pages/game-discovery.html`   |
