@@ -3,9 +3,9 @@ let allGames = [];
 document.addEventListener('DOMContentLoaded', async () => {
   requireAuth();
 
-  await loadCatalog();
   initSearch();
   initGenreFilters();
+  await loadCatalog();
 });
 
 // ─── Catalog ──────────────────────────────────────────────────────────────────
@@ -29,7 +29,12 @@ async function loadCatalog() {
     return;
   }
 
-  allGames = await res.json();
+  try {
+    allGames = await res.json();
+  } catch {
+    tbody.innerHTML = errorRow('Resposta inválida do servidor.');
+    return;
+  }
   renderCatalog(allGames);
 }
 
