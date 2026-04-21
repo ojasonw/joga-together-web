@@ -1,8 +1,11 @@
+let allGames = [];
+
 document.addEventListener('DOMContentLoaded', async () => {
   requireAuth();
 
   await loadCatalog();
   initSearch();
+  initGenreFilters();
 });
 
 // ─── Catalog ──────────────────────────────────────────────────────────────────
@@ -26,7 +29,13 @@ async function loadCatalog() {
     return;
   }
 
-  const games = await res.json();
+  allGames = await res.json();
+  renderCatalog(allGames);
+}
+
+function renderCatalog(games) {
+  const tbody = document.getElementById('games-catalog-body');
+  if (!tbody) return;
 
   if (!games.length) {
     tbody.innerHTML = emptyRow();
@@ -53,12 +62,48 @@ async function loadCatalog() {
       </td>
       <td class="px-8 py-6 font-bold text-on-surface text-sm">${formatDate(game.releaseDate)}</td>
       <td class="px-8 py-6 text-right">
-        <button class="px-4 py-2 bg-primary-container text-on-primary-container text-xs font-bold rounded hover:brightness-110 transition-all">
+        <button
+          class="view-rooms-btn px-4 py-2 bg-primary-container text-on-primary-container text-xs font-bold rounded hover:brightness-110 transition-all"
+          data-game-id="${game.id}"
+          data-game-title="${escapeHtml(game.title)}">
           View Rooms
         </button>
       </td>
     </tr>
   `).join('');
+
+  tbody.querySelectorAll('.view-rooms-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      window.location.href = `/browse-rooms?gameId=${btn.dataset.gameId}`;
+    });
+  });
+}
+
+// ─── Genre Filters ────────────────────────────────────────────────────────────
+
+function initGenreFilters() {
+  const btns = document.querySelectorAll('.genre-filter-btn');
+  if (!btns.length) return;
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => {
+        b.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+        b.classList.add('bg-surface-container-high', 'text-on-surface-variant', 'font-medium');
+      });
+      btn.classList.add('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+      btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant', 'font-medium');
+
+      const filter = btn.dataset.filter.toLowerCase();
+      if (!filter) {
+        renderCatalog(allGames);
+      } else {
+        renderCatalog(allGames.filter(g =>
+          (g.genre || '').toLowerCase().includes(filter)
+        ));
+      }
+    });
+  });
 }
 
 // ─── RAWG Search ──────────────────────────────────────────────────────────────
